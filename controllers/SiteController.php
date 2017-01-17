@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
+use yii\web\UploadedFile;
 use yii\filters\VerbFilter;
 use yii\helpers\Html;
 use app\models\LoginForm;
@@ -141,6 +142,8 @@ class SiteController extends Controller
         if ($form->load(Yii::$app->request->post()) && $form->validate()){
             $name = Html::encode($form->name);
             $email = Html::encode($form->email);
+            $form->file = UploadedFile::getInstance($form, 'file');
+            $form->file->saveAs('photo/'.$form->file->baseName.'.'.$form->file->extension);
         } else {
             $name = '';
             $email = '';
