@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use Yii;
+use yii\data\Pagination;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\UploadedFile;
@@ -158,10 +159,20 @@ class SiteController extends Controller
     }
 
     public function actionComments(){
-        $comments = Comments::find()->all();
+        $comments = Comments::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => '2',
+            'totalCount' => $comments->count()
+        ]);
+
+        $comments = $comments->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
 
         return $this->render('comments', [
-            'comments' => $comments
+            'comments' => $comments,
+            'pagination' => $pagination
         ]);
     }
 }
