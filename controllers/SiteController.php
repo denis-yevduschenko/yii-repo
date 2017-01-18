@@ -6,6 +6,7 @@ use Yii;
 use yii\data\Pagination;
 use yii\filters\AccessControl;
 use yii\web\Controller;
+use yii\web\Cookie;
 use yii\web\UploadedFile;
 use yii\filters\VerbFilter;
 use yii\helpers\Html;
@@ -170,10 +171,12 @@ class SiteController extends Controller
             ->limit($pagination->limit)
             ->all();
 
+        $cookies = Yii::$app->request->cookies;
+
         return $this->render('comments', [
             'comments' => $comments,
             'pagination' => $pagination,
-            'name' => Yii::$app->session->get('name')
+            'name' => $cookies->getValue('name')
         ]);
     }
 
@@ -181,8 +184,13 @@ class SiteController extends Controller
         $name = Yii::$app->request->get("name", "Guest");
 
         $session = Yii::$app->session;
+        $cookies = Yii::$app->response->cookies;
 
         $session->set('name', $name);
+        $cookies->add(new Cookie([
+            'name' => 'name',
+            'value' => $name
+        ]));
 
         return $this->render('user', [
             'name' => $name
