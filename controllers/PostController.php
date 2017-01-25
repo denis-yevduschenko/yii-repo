@@ -8,7 +8,7 @@ use app\models\Posts;
 class PostController extends AppController{
 
     public function actionIndex(){
-        $posts = Posts::find()->all();
+        $posts = Posts::find()->select('id, title, img, intro_text')->limit(3)->all();
         return $this->render('index', [
             'posts' => $posts
         ]);
@@ -17,5 +17,11 @@ class PostController extends AppController{
 
     public function actionTest(){
         return $this->render('test');
+    }
+
+    public function actionArticle($id = 'null'){
+        return $this->render('article', [
+            'id' => $id
+        ]);
     }
 }
