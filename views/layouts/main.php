@@ -3,11 +3,14 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use kartik\icons\Icon;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+
+Icon::map($this);
 
 AppAsset::register($this);
 ?>
@@ -36,7 +39,7 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'Home', 'url' => ['/']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
@@ -57,7 +60,9 @@ AppAsset::register($this);
     ?>
     <div class="container">
         <?= Breadcrumbs::widget([
+            'homeLink' => ['label' => Icon::show('home',['class'=>'fa-2x']).'Home', 'url' => '/'],
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            'encodeLabels' => false,
         ]) ?>
         <?= $content ?>
     </div>
