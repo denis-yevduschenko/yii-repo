@@ -36,7 +36,7 @@ use yii\bootstrap\Carousel;
 <div class="container">
     <div class="container-fluid">
         <?foreach ($posts as $post){?>
-            <div class="col-xs-6 col-sm-6 col-md-4">
+            <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <img src="<?=$post->img?>" class="img-responsive" alt="">
                     <div class="caption">
