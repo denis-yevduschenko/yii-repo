@@ -11,6 +11,7 @@ class PostController extends AppController{
     public function actionIndex(){
         $posts = Posts::find()
             ->select('id, title, img, intro_text')
+            ->orderBy(["id" => SORT_DESC])
             ->limit(3)
             ->all();
         return $this->render('index', [
@@ -30,7 +31,6 @@ class PostController extends AppController{
     }
 
     public function actionCategories(){
-//        $categories = Posts::find()->select('category')->all();
         $categories = Posts::find()
             ->select('category')
             ->groupBy('category')
@@ -39,8 +39,7 @@ class PostController extends AppController{
             return $this->render('categories', [
                 'categories' => $categories
             ]);
-        }
-        else{
+        } else{
             throw new NotFoundHttpException('Page not found');
         }
     }
@@ -61,8 +60,7 @@ class PostController extends AppController{
                 'posts' => $posts,
                 'category' => $category
             ]);
-        }
-        else {
+        } else {
             throw new NotFoundHttpException('Category not found');
         }
     }

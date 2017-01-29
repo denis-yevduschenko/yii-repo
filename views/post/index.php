@@ -35,6 +35,9 @@ use yii\bootstrap\Carousel;
 </div>
 <div class="container">
     <div class="container-fluid">
+        <div class="container">
+            <h2>Last 3 posts</h2>
+        </div>
         <?foreach ($posts as $post){?>
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="thumbnail">
