@@ -1,5 +1,7 @@
 <?php
 use yii\bootstrap\Carousel;
+use yii\helpers\Html;
+
 ?>
 </div>
 <div class="container-fluid">
@@ -36,15 +38,15 @@ use yii\bootstrap\Carousel;
 <div class="container">
     <div class="container-fluid">
         <div class="container">
-            <h2>Last 3 posts</h2>
+            <h2>Last <?=$quantity?> posts</h2>
         </div>
         <?foreach ($posts as $post){?>
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <img src="<?=$post->img?>" class="img-responsive" alt="">
                     <div class="caption">
-                        <h3><?=$post->title?></h3>
-                        <p><?=$post->intro_text?></p>
+                        <h3><?=Html::encode($post->title)?></h3>
+                        <p><?=Html::encode($post->intro_text)?></p>
                         <p><a href="<?=Yii::$app->urlManager->createUrl(['post/article', 'id' => $post->id])?>" class="btn btn-success btn-block" role="button">Button</a></p>
                     </div>
                 </div>

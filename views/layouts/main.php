@@ -69,13 +69,6 @@ AppAsset::register($this);
     </div>
 </div>
 
-<!--<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>-->
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <hr>
 
@@ -158,21 +151,20 @@ AppAsset::register($this);
                                     var js, fjs = d.getElementsByTagName(s)[0];
                                     if (d.getElementById(id)) return;
                                     js = d.createElement(s); js.id = id;
-                                    js.src = "//connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v2.0";
+                                    js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.0";
                                     fjs.parentNode.insertBefore(js, fjs);
                                 }(document, 'script', 'facebook-jssdk'));
                             </script>
+                            <div class="container">
+                                <div class="fb-like" data-href="" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 
-                            <div class="fb-like" data-href="" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-url="">Tweet</a>
+                                <script>
+                                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                                </script>
 
-                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="">Tweet</a>
-                            <script>
-                                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-                            </script>
-
-                            <div class="g-plusone" data-annotation="inline" data-width="300" data-href=""></div>
-
-                            <!-- Helyezd el ezt a címkét az utolsó +1 gomb címke mögé. -->
+                                <div class="g-plusone" data-annotation="inline" data-width="300" data-href=""></div>
+                            </div>
                             <script type="text/javascript">
                                 (function() {
                                     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;

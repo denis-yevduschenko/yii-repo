@@ -9,13 +9,15 @@ use yii\web\NotFoundHttpException;
 class PostController extends AppController{
 
     public function actionIndex(){
+        $quantity = 6;
         $posts = Posts::find()
             ->select('id, title, img, intro_text')
             ->orderBy(["id" => SORT_DESC])
-            ->limit(3)
+            ->limit($quantity)
             ->all();
         return $this->render('index', [
-            'posts' => $posts
+            'posts' => $posts,
+            'quantity' => $quantity
         ]);
     }
 
@@ -25,8 +27,12 @@ class PostController extends AppController{
     }
 
     public function actionArticle($id = 'null'){
+        $post = Posts::findOne($id);
+        if (!$post){
+            throw new NotFoundHttpException('Article not found');
+        }
         return $this->render('article', [
-            'id' => $id
+            'post' => $post
         ]);
     }
 
@@ -44,15 +50,15 @@ class PostController extends AppController{
         }
     }
 
-    public function actionCategory($category = 'All'){
-        if($category == 'All'){
+    public function actionCategory($category = 'all'){
+        if($category == 'all'){
             $posts = Posts::find()
-                ->select('category')
+                ->orderBy(["id" => SORT_DESC])
                 ->all();
         } else {
             $posts = Posts::find()
-                ->select('category')
                 ->where(['category' => $category])
+                ->orderBy(["id" => SORT_DESC])
                 ->all();
         }
         if(!empty($posts)){
