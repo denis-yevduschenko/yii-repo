@@ -1,7 +1,18 @@
 <?php
+
 use yii\bootstrap\Carousel;
 use yii\helpers\Html;
 
+$this->title = "Personal blog";
+
+$this->registerMetaTag([
+    'name' => 'description',
+    'content' => 'Personal blog'
+]);
+$this->registerMetaTag([
+    'name' => 'keywords',
+    'content' => 'Personal blog, programming, developing'
+]);
 ?>
 </div>
 <div class="container-fluid">

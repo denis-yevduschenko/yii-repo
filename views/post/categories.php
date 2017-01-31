@@ -1,6 +1,15 @@
 <?php
 use app\models\Posts;
 
+$this->registerMetaTag([
+    'name' => 'description',
+    'content' => 'Personal blog'
+]);
+$this->registerMetaTag([
+    'name' => 'keywords',
+    'content' => 'Personal blog, programming, developing'
+]);
+
 $this->params['breadcrumbs'][] = ['label' => 'Categories'];
 ?>
 <div class="container">
