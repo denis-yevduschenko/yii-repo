@@ -37,6 +37,9 @@ class PostController extends Controller
     {
         $dataProvider = new ActiveDataProvider([
             'query' => Post::find(),
+            'pagination' => [
+                'pageSize' => 10,
+            ],
         ]);
 
         return $this->render('index', [

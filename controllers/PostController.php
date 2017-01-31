@@ -41,6 +41,7 @@ class PostController extends AppController{
             ->select('category')
             ->groupBy('category')
             ->all();
+        
         if(!empty($categories)){
             return $this->render('categories', [
                 'categories' => $categories

@@ -43,7 +43,7 @@ use yii\helpers\Html;
         <?foreach ($posts as $post){?>
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <img src="<?=$post->img?>" class="img-responsive" alt="">
+                    <img src="<?=$post->imagepath?>" class="img-responsive" alt="">
                     <div class="caption">
                         <h3><?=Html::encode($post->title)?></h3>
                         <p><?=Html::encode($post->intro_text)?></p>
