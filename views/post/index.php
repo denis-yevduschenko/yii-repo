@@ -2,6 +2,7 @@
 
 use yii\bootstrap\Carousel;
 use yii\helpers\Html;
+use yii\web\JqueryAsset;
 
 $this->title = "Personal blog";
 
@@ -13,6 +14,9 @@ $this->registerMetaTag([
     'name' => 'keywords',
     'content' => 'Personal blog, programming, developing'
 ]);
+
+$this->registerJsFile(Yii::getAlias('@web/js/salvattore.min.js'), ['depends' => JqueryAsset::className()]);
+$this->registerCssFile('@web/css/masonry.css');
 ?>
 </div>
 <div class="container-fluid">
@@ -21,12 +25,12 @@ $this->registerMetaTag([
         $slides = [
             [
                 'content' => '<img src="/images/slides/slide1.jpg"/>',
-                'caption' => '<h1>Заголовок</h1><p>Какой-то дополнительный текст</p><p><a href="/article/link/1" class="btn btn-primary">Подробнее <span class="glyphicon glyphicon-chevron-right"></a></p>',
+                'caption' => '<h1>Заголовок</h1><p class="hidden-xs">Какой-то дополнительный текст</p><p><a href="/article/link/1" class="btn btn-primary">Подробнее <span class="glyphicon glyphicon-chevron-right"></a></p>',
                 'options' => []
             ],
             [
                 'content' => '<img src="/images/slides/slide2.jpg"/>',
-                'caption' => '<h1>Helicopter</h1><p>A helicopter is a type of rotorcraft in which lift and thrust are supplied by rotors.</p>',
+                'caption' => '<h1>Helicopter</h1><p class="hidden-xs">A helicopter is a type of rotorcraft in which lift and thrust are supplied by rotors.</p>',
                 'options' => []
             ],
             [
@@ -47,20 +51,21 @@ $this->registerMetaTag([
     </div>
 </div>
 <div class="container">
-    <div class="container-fluid">
-        <div class="container">
-            <h2>Last <?=$quantity?> posts</h2>
-        </div>
+    <div class="container">
+        <h2>Last <?=$quantity?> posts</h2>
+    </div>
+    <div class="container-fluid masonry" data-columns>
         <?foreach ($posts as $post){?>
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="item">
                 <div class="thumbnail">
                     <img src="<?=$post->imagepath?>" class="img-responsive" alt="">
                     <div class="caption">
                         <h3><?=Html::encode($post->title)?></h3>
                         <p><?=Html::encode($post->intro_text)?></p>
-                        <p><a href="<?=Yii::$app->urlManager->createUrl(['post/article', 'id' => $post->id])?>" class="btn btn-success btn-block" role="button">Button</a></p>
+                        <p><a href="<?=Yii::$app->urlManager->createUrl(['post/article', 'id' => $post->id])?>" class="btn btn-success btn-block" role="button">Read more <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
                     </div>
                 </div>
             </div>
         <?}?>
     </div>
+

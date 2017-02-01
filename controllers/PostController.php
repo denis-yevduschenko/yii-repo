@@ -12,6 +12,7 @@ class PostController extends AppController{
         $quantity = 6;
         $posts = Posts::find()
             ->select('id, title, img, intro_text')
+            ->where(['hide' => 0])
             ->orderBy(["id" => SORT_DESC])
             ->limit($quantity)
             ->all();

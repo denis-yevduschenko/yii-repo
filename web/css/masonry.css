@@ -1,0 +1,20 @@
+@media (max-width: 767px) {
+    .masonry[data-columns]::before{
+        content: '1 .col-xs-12'
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .masonry[data-columns]::before{
+        content: '2 .col-sm-6'
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .masonry[data-columns]::before{
+        content: '3 .col-md-4'
+    }
+}
+@media (min-width: 1200px) {
+    .masonry[data-columns]::before{
+        content: '3 .col-lg-4'
+    }
+}
