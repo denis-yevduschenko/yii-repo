@@ -1,10 +1,7 @@
 <?php
 use yii\helpers\Html;
 
-
-$newHits = $post->hits;
-$post->hits = ++$newHits;
-$post->save();
+$post->updateCounters(['hits' => 1]);
 
 $url = '/post/article?id='.$post->id;
 $this->params['breadcrumbs'][] = ['label' => 'Categories', 'url' => ['/post/categories']];

@@ -7,17 +7,17 @@ use Yii;
 /**
  * This is the model class for table "bl_posts".
  *
- * @property string $id
+ * @property integer $id
  * @property integer $is_release
  * @property string $category
  * @property string $title
  * @property string $img
  * @property string $intro_text
  * @property string $full_text
- * @property string $date
+ * @property integer $date
  * @property string $meta_desc
  * @property string $meta_key
- * @property string $hits
+ * @property integer $hits
  * @property integer $hide
  * @property integer $no_form
  */
@@ -51,7 +51,7 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'is_release' => 'Is Release',
+            'is_release' => 'Is Release (true or false)',
             'category' => 'Category',
             'title' => 'Title',
             'img' => 'Img',
@@ -61,8 +61,8 @@ class Post extends \yii\db\ActiveRecord
             'meta_desc' => 'Meta Desc',
             'meta_key' => 'Meta Key',
             'hits' => 'Hits',
-            'hide' => 'Hide',
-            'no_form' => 'No Form',
+            'hide' => 'Hide (true or false)',
+            'no_form' => 'No Form (true or false)',
         ];
     }
 }
