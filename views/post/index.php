@@ -19,7 +19,7 @@ $this->registerJsFile(Yii::getAlias('@web/js/salvattore.min.js'), ['depends' => 
 $this->registerCssFile('@web/css/masonry.css');
 ?>
 </div>
-<div class="container-fluid">
+<div class="container-fluid hidden-xs">
     <div class="row">
         <?php
         $slides = [

@@ -6,12 +6,13 @@ namespace app\controllers;
 use app\models\LoginForm;
 use app\models\Posts;
 use app\models\RegisterForm;
+use app\models\UserIdentity;
 use Yii;
 use yii\helpers\Html;
 use yii\web\NotFoundHttpException;
 
 class PostController extends AppController{
-
+    
     public function actionIndex(){
         $quantity = 6;
         $posts = Posts::find()
@@ -29,6 +30,10 @@ class PostController extends AppController{
 
     public function actionTest(){
         return $this->render('test');
+    }
+
+    public function actionSuccess(){
+        return $this->render('success');
     }
 
     public function actionArticle($id = 'null'){
@@ -91,13 +96,8 @@ class PostController extends AppController{
             $username = Html::encode($regModel->username);
             $email = Html::encode($regModel->email);
             $password = md5(Html::encode($regModel->password));
-            return $this->render('successRegistration', [
-                'last_name' => $last_name,
-                'first_name' => $first_name,
-                'username' => $username,
-                'email' => $email,
-                'password' => $password,
-            ]);
+            UserIdentity::registerUser($last_name, $first_name, $username, $email, $password);
+            return $this->redirect(['success']);
         } else {
             $last_name = '';
             $first_name = '';
@@ -113,4 +113,6 @@ class PostController extends AppController{
             'regModel' => $regModel,
         ]);
     }
+
+
 }

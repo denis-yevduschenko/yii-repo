@@ -1,4 +1,5 @@
 <?php
+$this->title = 'Test';
 $this->params['breadcrumbs'][] = ['label' => 'Test', 'url' => ['/post/test']];
 //$this->params['breadcrumbs'][] = Yii::$app->controller->substr_content($this->title, '90');
 ?>

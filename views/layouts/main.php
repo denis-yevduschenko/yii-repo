@@ -2,7 +2,6 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-$this->registerCssFile('css/footer.css');
 
 use kartik\icons\Icon;
 use yii\helpers\Html;
@@ -28,28 +27,73 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xs-4">
+                    <div class="top-number"><p><i class="fa fa-envelope-o"></i> d.yevduschenko@gmail.com</p></div>
+                </div>
+                <div class="col-sm-6 col-xs-8">
+                    <div class="social">
+                        <ul class="social-share">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                        </ul>
+                        <div class="search" style="display:inline-block"> <!-- TODO :: убрать/нужно пофиксить -->
+                            <form role="form">
+                                <input type="text" class="search-form" autocomplete="off" placeholder="Search">
+                                <i class="fa fa-search"></i>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Future Blog',
+        'brandLabel' => 'MFB',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse navbar-static-top',
         ],
     ]);
     echo Nav::widget([
+        'activateItems'=>'true',
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => Icon::show('home',['class'=>'fa-1x']).'Home', 'url' => ['/']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => Icon::show('mobile',['class'=>'fa-1x']).'Test', 'url' => [Yii::$app->urlManager->createUrl(['/post/test'])]],
+            ['label' => Icon::show('list',['class'=>'fa-1x']).'Categories',
+                'url' => ['post/categories'],
+                'options'=>['class'=>'dropdown'],
+                'template' => '<a href="{url}" class="url-class">{label}</a>',
+                'items' => [
+                    ['label' => 'News', 'url' => [Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'News'])]],
+                    ['label' => 'Android', 'url' => [Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'Android'])]],
+                    ['label' => 'PHP', 'url' => [Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'PHP'])]],
+                    ['label' => 'Java', 'url' => [Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'Java'])]],
+                    ['label' => 'Books', 'url' => [Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'Books'])]],
+                    ['label' => 'Web', 'url' => [Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'Web'])]],
+                    ['label' => 'Windows', 'url' => [Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'Windows'])]],
+                    '<li class="divider"></li>',
+                    ['label' => 'All posts', 'url' => [Yii::$app->urlManager->createUrl(['/post/category'])]],
+                    ['label' => 'Categories', 'url' => [Yii::$app->urlManager->createUrl(['/post/categories'])]],
+                ]
+            ],
+            ['label' => Icon::show('info-circle',['class'=>'fa-1x']).'About', 'url' => [Yii::$app->urlManager->createUrl(['/site/about'])]],
+            ['label' => Icon::show('commenting-o',['class'=>'fa-1x']).'Contact', 'url' => [Yii::$app->urlManager->createUrl(['/site/contact'])]],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/post/login']]
+                ['label' => Icon::show('sign-in',['class'=>'fa-1x']).'Login', 'url' => [Yii::$app->urlManager->createUrl(['/post/login'])]]
             ) : (
                 '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
+                . Html::beginForm(Yii::$app->urlManager->createUrl(['/site/logout']), 'post')
                 . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
+                    Icon::show('sign-out',['class'=>'fa-1x']).'Logout (' . Yii::$app->user->identity->username . ')',
+                    ['class' => 'btn btn-info logout']
                 )
                 . Html::endForm()
                 . '</li>'
@@ -79,7 +123,6 @@ AppAsset::register($this);
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="container">
-
                             <div class="col-lg-3 col-md-6">
                                 <div class="cuadro_intro_hover " style="background-color:#cccccc;">
                                     <p style="text-align:center; margin-top:20px;">

@@ -33,8 +33,7 @@ class Posts extends ActiveRecord{
      * @return int|string
      */
     public static function retrieveQuantityPostsCategory($category){
-        $quantity = Posts::find()->where(['category' => $category])->count();
-        return $quantity;
+        return Posts::find()->where(['category' => $category, 'hide' => '0'])->count();
     }
 }
 ?>
