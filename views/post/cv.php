@@ -7,58 +7,164 @@
  */
 echo __FILE__; ?>
 
-<div class="container-fluid">
+<div class="container-fluid cv">
     <div class="row">
         <h1 style="text-align: center">logo</h1>
     </div>
     <hr>
     <div class="row">
-        <div class="col-sm-8">
-            <h1>Personal details</h1>
-            <h1>Denis Yevduschenko</h1>
-            <h2>Web Software Developer</h2>
+        <div class="col-sm-6">
+            <h3 class="sub-title"><span class="fa fa-info-circle fa-2x"></span> Personal details</h3>
+            <div class="cv-item">
+                <div class="col-xs-4">
+                    <p>Name</p>
+                </div>
+                <div class="col-xs-8">
+                    <p><span class="fa fa-id-card"></span> Denis Yevduschenko</p>
+                </div>
+            </div>
+            <div class="cv-item">
+                <div class="col-xs-4">
+                    <p>D.O.B</p>
+                </div>
+                <div class="col-xs-8">
+                    <p><span class="fa fa-calendar-o"></span> 15.03.1989</p>
+                </div>
+            </div>
+            <div class="cv-item">
+                <div class="col-xs-4">
+                    <p>Web</p>
+                </div>
+                <div class="col-xs-8">
+                    <p><span class="fa fa-globe"></span> http://www.blog.com</p>
+                </div>
+            </div>
+            <div class="cv-item">
+                <div class="col-xs-4">
+                    <p>Contact</p>
+                </div>
+                <div class="col-xs-8">
+                    <p><span class="fa fa-volume-control-phone"></span> +380669928899</p>
+                </div>
+            </div>
+            <div class="cv-item">
+                <div class="col-xs-4">
+                    <p>E-Mail</p>
+                </div>
+                <div class="col-xs-8">
+                    <p><span class="fa fa-envelope-o"></span>d.yevduschenko@gmail.com</p>
+                </div>
+            </div>
         </div>
-
-        <div class="col-sm-4">
-            <h1>Education</h1>
-                <h3><a id="pdf" href="#">Download PDF</a></h3>
-                <h3><a href="mailto:name@yourdomain.com">name@yourdomain.com</a></h3>
-                <h3>(313) - 867-5309</h3>
+        <div class="col-sm-6">
+            <h3 class="sub-title"><span class="fa fa-graduation-cap fa-2x"></span> Education</h3>
+            <div class="cv-item">
+                <div class="col-xs-5">
+                    <p>University</p>
+                </div>
+                <div class="col-xs-7">
+                    <p>DNU O.Gonchara</p>
+                </div>
+            </div>
+            <div class="cv-item">
+                <div class="col-xs-5">
+                    <p></p>
+                </div>
+                <div class="col-xs-7">
+                    <p>Department of Applied Mathematics</p>
+                </div>
+            </div>
+            <div class="cv-item">
+                <div class="col-xs-5">
+                    <p></p>
+                </div>
+                <div class="col-xs-7">
+                    <p>a specialty computer science, degree specialist, 2010-2015.
+                    </p>
+                </div>
+            </div>
+            <h3 class="sub-title"><span class="fa fa-graduation-cap fa-2x"></span> Extra education</h3>
+            <div class="cv-item">
+                <div class="col-xs-5">
+                    <p>IT-Training Center "Level Up"</p>
+                </div>
+                <div class="col-xs-7">
+                    <p>"The basic foundations of the OOP", 2015</p>
+                </div>
+            </div>
         </div>
     </div>
     <hr>
     <div class="row">
         <div class="col-xs-12">
-            <h1>Objective</h1>
+            <h3  class="sub-title"><span class="fa fa-bullseye fa-2x"></span> Objective</h3>
         </div>
         <div class="col-xs-12">
-            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+            <p> I am interested in working as a web developer and my goal is to get good opportunities on the same profile in IT-field. I want to improve my level of knowledge and practical skills. </p>
         </div>
     </div>
     <hr>
     <div class="row">
         <div class="col-xs-12">
-            <h1>Experience</h1>
+            <h3 class="sub-title"><span class="fa fa-briefcase fa-2x"></span> Experience</h3>
         </div>
         <div class="col-xs-4 col-lg-3">
-            <h2>Facebook</h2>
-            <h3>Senior Interface Designer</h3>
+            <h4>Grusha.ua</h4>
+            <p>Oct 2016 - present</p>
         </div>
         <div class="col-xs-8 col-lg-9">
+            <h4>Web developer</h4>
             <p>Intrinsicly enable optimal core competencies through corporate relationships.
             Phosfluorescently implement worldwide vortals and client-focused imperatives.
             Conveniently initiate virtual paradigms and top-line convergence. </p>
         </div>
+        <div class="col-xs-4 col-lg-3">
+            <h4>Intime LLC</h4>
+            <p>Aug 2012 - Oct 2016</p>
+        </div>
+        <div class="col-xs-8 col-lg-9">
+            <h4>Operator</h4>
+        </div>
     </div>
     <hr>
     <div class="row">
         <div class="col-xs-6">
-            <h1>Profile</h1>
-            <h2>Facebook</h2>
-            <h3>Senior Interface Designer</h3>
+            <h3 class="sub-title"><span class="fa fa-user-circle-o fa-2x"></span> Profile</h3>
+            <div class="col-xs-4">
+                <img src="/images/cv/cv-photo.jpg" class="img-circle" alt="Cinque Terre" width="100%" height="">
+            </div>
+            <div class="col-xs-8" style="margin: auto;">
+                <p>
+                    <a href="https://github.com/denis-yevduschenko">
+                    <span class="fa-stack">
+                        <span class="fa fa-circle-thin fa-stack-2x"></span>
+                        <span class="fa fa-github fa-stack-1x"></span>
+                    </span>
+                    /denis-yevduschenko</a>
+                </p>
+                <p>
+                    <a href="https://www.linkedin.com/in/d-yevduschenko/">
+                    <span class="fa-stack">
+                        <span class="fa fa-circle-thin fa-stack-2x"></span>
+                        <span class="fa fa-linkedin fa-stack-1x"></span>
+                    </span>
+                    /in/d-yevduschenko</a>
+                </p>
+                <p>
+                    <a href="https://www.facebook.com/denis.yevduschenko">
+                    <span class="fa-stack">
+                        <span class="fa fa-circle-thin fa-stack-2x"></span>
+                        <span class="fa fa-facebook fa-stack-1x"></span>
+                    </span>
+                    /denis.yevduschenko</a>
+                </p>
+            </div>
+            <div class="col-xs-12">
+                Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...
+            </div>
         </div>
         <div class="col-xs-6">
-            <h1>Skills</h1>
+            <h3 class="sub-title"><span class="fa fa-wrench fa-2x"></span> Skills</h3>
             <div class="yui-u">
                 <ul class="talent">
                     <li>XHTML</li>
@@ -81,121 +187,33 @@ echo __FILE__; ?>
         </div>
     </div>
     <hr>
-    <div class="row">
-        <div id="bd">
-            <div id="yui-main">
-                <div class="yui-b">
+</div>
 
-                    <div class="yui-gf">
-                        <div class="yui-u first">
-                            <h2>Profile</h2>
-                        </div>
-                        <div class="yui-u">
-                            <p class="enlarge">
-                                Progressively evolve cross-platform ideas before impactful infomediaries. Energistically
-                                visualize tactical initiatives before cross-media catalysts for change.
-                            </p>
-                        </div>
-                    </div><!--// .yui-gf -->
-
-                    <div class="yui-gf">
-                        <div class="yui-u first">
-                            <h2>Skills</h2>
-                        </div>
-                        <div class="yui-u">
-
-                            <div class="talent">
-                                <h2>Web Design</h2>
-                                <p>Assertively exploit wireless initiatives rather than synergistic core
-                                    competencies. </p>
-                            </div>
-
-                            <div class="talent">
-                                <h2>Interface Design</h2>
-                                <p>Credibly streamline mission-critical value with multifunctional functionalities. </p>
-                            </div>
-
-                            <div class="talent">
-                                <h2>Project Direction</h2>
-                                <p>Proven ability to lead and manage a wide variety of design and development projects
-                                    in team and independent situations.</p>
-                            </div>
-                        </div>
-                    </div><!--// .yui-gf -->
-
-                    <div class="yui-gf">
-                        <div class="yui-u first">
-                            <h2>Technical</h2>
-                        </div>
-                        <div class="yui-u">
-                            <ul class="talent">
-                                <li>XHTML</li>
-                                <li>CSS</li>
-                                <li class="last">Javascript</li>
-                            </ul>
-
-                            <ul class="talent">
-                                <li>Jquery</li>
-                                <li>PHP</li>
-                                <li class="last">CVS / Subversion</li>
-                            </ul>
-
-                            <ul class="talent">
-                                <li>OS X</li>
-                                <li>Windows XP/Vista</li>
-                                <li class="last">Linux</li>
-                            </ul>
-                        </div>
-                    </div><!--// .yui-gf-->
-
-                    <div class="yui-gf">
-
-                        <div class="yui-u first">
-                            <h2>Experience</h2>
-                        </div><!--// .yui-u -->
-
-                        <div class="yui-u">
-
-                            <div class="job">
-                                <h2>Facebook</h2>
-                                <h3>Senior Interface Designer</h3>
-                                <h4>2005-2007</h4>
-                                <p>Intrinsicly enable optimal core competencies through corporate relationships.
-                                    Phosfluorescently implement worldwide vortals and client-focused imperatives.
-                                    Conveniently initiate virtual paradigms and top-line convergence. </p>
-                            </div>
-
-                        </div><!--// .yui-u -->
-                    </div><!--// .yui-gf -->
-
-
-                    <div class="yui-gf last">
-                        <div class="yui-u first">
-                            <h2>Education</h2>
-                        </div>
-                        <div class="yui-u">
-                            <h2>Indiana University - Bloomington, Indiana</h2>
-                            <h3>Dual Major, Economics and English &mdash; <strong>4.0 GPA</strong></h3>
-                        </div>
-                    </div><!--// .yui-gf -->
-
-
-                </div><!--// .yui-b -->
-            </div><!--// yui-main -->
-        </div><!--// bd -->
-
-        <div id="ft">
-            <p>Jonathan Doe &mdash; <a href="mailto:name@yourdomain.com">name@yourdomain.com</a> &mdash; (313) -
-                867-5309</p>
-        </div><!--// footer -->
-
-    </div><!-- // inner -->
-
-
-</div><!--// doc -->
-
-
+<h2>Web Software Developer</h2>
+<h3><a id="pdf" href="#">Download PDF</a></h3>
+<h3><a href="mailto:name@yourdomain.com">name@yourdomain.com</a></h3>
+<h3>(313) - 867-5309</h3>
 <style>
+
+    .cv .sub-title{
+        text-transform: uppercase;
+        color: dodgerblue;
+        border-bottom: dodgerblue solid 2px;
+    }
+
+
+    a {
+        color: #990003
+    }
+
+
+
+
+
+
+
+
+
     .msg {
         padding: 10px;
         background: #222;
@@ -292,9 +310,7 @@ echo __FILE__; ?>
         padding-right: 3em;
     }
 
-    a {
-        color: #990003
-    }
+
 
     a:hover {
         text-decoration: none;
