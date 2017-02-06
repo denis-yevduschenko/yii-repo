@@ -36,6 +36,10 @@ class PostController extends AppController{
         return $this->render('success');
     }
 
+    public function actionCv(){
+        return $this->render('cv');
+    }
+
     public function actionArticle($id = 'null'){
         $post = Posts::findOne($id);
         if (!$post){

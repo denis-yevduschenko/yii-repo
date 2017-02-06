@@ -4,9 +4,11 @@
 /* @var $content string */
 
 use kartik\icons\Icon;
+use yii\bootstrap\BootstrapAsset;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\web\JqueryAsset;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
@@ -31,16 +33,16 @@ AppAsset::register($this);
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-xs-4">
-                    <div class="top-number"><p><i class="fa fa-envelope-o"></i>d.yevduschenko@gmail.com</p></div>
+                    <div class="top-number"><p><i class="fa fa-envelope-o"></i> d.yevduschenko@gmail.com</p></div>
                 </div>
                 <div class="col-sm-6 col-xs-8">
                     <div class="social">
                         <ul class="social-share">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            <li><a href="https://www.facebook.com/denis.yevduschenko" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/d-yevduschenko" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://vk.com/thankyousaf" target="_blank"><i class="fa fa-vk"></i></a></li>
+                            <li><a href="skype:borntow1n?chat" target="_blank"><i class="fa fa-skype"></i></a></li>
                         </ul>
                         <div class="search" style="display:inline-block"> <!-- TODO :: убрать/нужно пофиксить -->
                             <form role="form">

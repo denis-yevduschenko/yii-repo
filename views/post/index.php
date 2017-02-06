@@ -1,8 +1,8 @@
 <?php
 
+use app\assets\MasonryAsset;
 use yii\bootstrap\Carousel;
 use yii\helpers\Html;
-use yii\web\JqueryAsset;
 
 $this->title = "Personal blog";
 
@@ -14,9 +14,7 @@ $this->registerMetaTag([
     'name' => 'keywords',
     'content' => 'Personal blog, programming, developing'
 ]);
-
-$this->registerJsFile(Yii::getAlias('@web/js/salvattore.min.js'), ['depends' => JqueryAsset::className()]);
-$this->registerCssFile('@web/css/masonry.css');
+MasonryAsset::register($this);
 ?>
 </div>
 <div class="container-fluid hidden-xs">

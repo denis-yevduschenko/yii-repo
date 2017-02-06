@@ -19,18 +19,16 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
-        'css/footer.css',
         'css/header.css',
+        'css/footer.css',
+        'css/site.css',
     ];
     public $js = [
     ];
-//    public $jsOptions = [
-//        'position' => View::POS_HEAD
-//    ];
+
     public $depends = [
         'app\assets\MyJqueryAsset',
-        //'yii\web\YiiAsset',
+        'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
 }
