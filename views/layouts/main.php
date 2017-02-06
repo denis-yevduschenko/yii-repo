@@ -31,7 +31,7 @@ AppAsset::register($this);
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-xs-4">
-                    <div class="top-number"><p><i class="fa fa-envelope-o"></i> d.yevduschenko@gmail.com</p></div>
+                    <div class="top-number"><p><i class="fa fa-envelope-o"></i>d.yevduschenko@gmail.com</p></div>
                 </div>
                 <div class="col-sm-6 col-xs-8">
                     <div class="social">
