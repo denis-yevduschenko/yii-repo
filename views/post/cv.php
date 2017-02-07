@@ -1,26 +1,47 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: dyevduschenko
- * Date: 06.02.2017
- * Time: 14:32
- */
-echo __FILE__; ?>
+<div class="container not-print">
+    <div class="row">
+        <div class="col-xs-8">
+            <h2>This is my CV. You can download it, if you want.</h2>
+            <p><a href="mailto:d.yevduschenko@gmail.com">My personal e-mail.</a></p>
+        </div>
+        <div class="col-xs-4">
+            <h3><p><a id="pdf" href="/upload/cv.pdf">Download  CV (PDF)</a></p></h3>
 
+        </div>
+    </div>
+</div>
 <div class="container-fluid cv">
     <div class="row">
-        <h1 style="text-align: center">logo</h1>
+        <div class="col-xs-5 cv-top-border-1"></div>
+        <div class="col-xs-2 cv-top-border-2"></div>
+        <div class="col-xs-5 cv-top-border-3"></div>
+        <div class="col-xs-12" id="example">
+            <ul>
+                <li>W</li>
+                <li>E</li>
+                <li>B</li>
+                <li>_</li>
+                <li>D</li>
+                <li>E</li>
+                <li>V</li>
+                <li>E</li>
+                <li>L</li>
+                <li>O</li>
+                <li>P</li>
+                <li>E</li>
+                <li>R</li>
+            </ul>
+        </div>
     </div>
-    <hr>
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-xs-6">
             <h3 class="sub-title"><span class="fa fa-info-circle fa-2x"></span> Personal details</h3>
             <div class="cv-personal-block">
                 <div class="col-xs-3 cv-personal-item">
                     <p>Name</p>
                 </div>
                 <div class="col-xs-9">
-                    <p><span class="fa fa-id-card"></span> Denis Yevduschenko</p>
+                    <p><span class="fa fa-id-card"></span> Denis Yevdushchenko</p>
                 </div>
             </div>
             <div class="cv-item">
@@ -31,7 +52,7 @@ echo __FILE__; ?>
                     <p><span class="fa fa-calendar-o"></span> 15.03.1989</p>
                 </div>
             </div>
-            <div class="cv-item">
+            <div class="cv-item .not-print">
                 <div class="col-xs-3 cv-personal-item">
                     <p>Web</p>
                 </div>
@@ -52,7 +73,7 @@ echo __FILE__; ?>
                     <p>E-Mail</p>
                 </div>
                 <div class="col-xs-9">
-                    <p><span class="fa fa-envelope-o"></span> d.yevduschenko@gmail.com</p>
+                    <p><a href="mailto:d.yevduschenko@gmail.com"><span class="fa fa-envelope-o"></span> d.yevduschenko@gmail.com</a></p>
                 </div>
             </div>
             <div class="cv-item">
@@ -60,12 +81,12 @@ echo __FILE__; ?>
                     <p>Skype</p>
                 </div>
                 <div class="col-xs-9">
-                    <p><span class="fa fa-skype"></span> borntow1n</p>
+                    <p><a href="skype:borntow1n?chat" target="_blank"><span class="fa fa-skype"></span> borntow1n</a></p>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6">
-            <h3 class="sub-title"><span class="fa fa-graduation-cap fa-2x"></span> Education</h3>
+        <div class="col-xs-6">
+            <h3 class="sub-title"><span class="fa fa-university fa-2x"></span> Education</h3>
             <div class="cv-item">
                 <div class="col-xs-5 cv-education-item">
                     <p>University</p>
@@ -108,7 +129,7 @@ echo __FILE__; ?>
         </div>
         <div class="col-xs-12">
             <div class="container">
-                <p>I am interested in working as a web developer and my goal is to get good opportunities on the same profile in IT-field. I want to improve my level of knowledge and practical skills. </p>
+                <p>I am interested in working as a web/Java developer and my goal is to get good opportunities on the same profile in IT-field. I want to improve my level of knowledge and practical skills. </p>
             </div>
         </div>
     </div>
@@ -123,9 +144,14 @@ echo __FILE__; ?>
             </div>
             <div class="col-xs-8 col-lg-9">
                 <h4>Web developer</h4>
-                <p>Intrinsicly enable optimal core competencies through corporate relationships.
-                Phosfluorescently implement worldwide vortals and client-focused imperatives.
-                Conveniently initiate virtual paradigms and top-line convergence. </p>
+                <ul>
+                    <li>Developing web code</li>
+                    <li>Trouble shooting and problem solving</li>
+                    <li>Creating web templates, working with database</li>
+                    <li>Fixing existing bugs</li>
+                    <li>Maintaining continuity throughout all websites both technically and creatively</li>
+
+                </ul>
             </div>
             <div class="col-xs-4 col-lg-3">
                 <h4 class="job-company">Intime LLC</h4>
@@ -133,6 +159,10 @@ echo __FILE__; ?>
             </div>
             <div class="col-xs-8 col-lg-9">
                 <h4>Operator</h4>
+                <ul>
+                    <li>Communication with clients</li>
+                    <li>Data entry</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -182,7 +212,13 @@ echo __FILE__; ?>
                 </p>
             </div>
             <div class="col-xs-12">
-                Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...
+                <p>Hello! I'm Denis, 27 year old web developer based in Dnipro, Ukraine.
+                    I enjoy programming in Java and sometime I want to work with this languages.</p>
+                <p>I want to grow!
+                    Aimed at delivering clean, high-quality, well documented code fully covered with tests.
+                    I'm trying to learn from past mistakes and I enjoy learning new things.</p>
+                <p>I have a healthy lifestyle, do sports. I have good communication skills and open to change.
+                    I adapt well to new situations.</p>
             </div>
         </div>
         <div class="col-xs-6">
@@ -192,20 +228,23 @@ echo __FILE__; ?>
                 <div class="col-xs-6">
                     <ul class="border">
                         <li>PHP</li>
+                        <li>Yii2, Bitrix</li>
                         <li>HTML, CSS</li>
                         <li>Javascript</li>
-                        <li>Jquery</li>
-                        <li>Yii2</li>
-                        <li>Git</li>
+                        <li>jQuery</li>
+                        <li>Bootstrap 3</li>
+                        <li>VCS (Git)</li>
                     </ul>
                 </div>
                 <div class="col-xs-6">
                     <ul class="border">
+                        <li>OOP, TDD</li>
                         <li>Java (SE,EE)</li>
                         <li>Hibernate</li>
-                        <li>Maven</li>
-                        <li>OOP, TDD</li>
+                        <li>Maven, Composer</li>
                         <li>jUnit</li>
+                        <li>MySQL</li>
+                        <li>Design patterns</li>
                     </ul>
                 </div>
             </div>
@@ -221,14 +260,115 @@ echo __FILE__; ?>
             </div>
         </div>
     </div>
-    <hr>
+    <div class="row">
+        <div class="col-xs-5 cv-top-border-1"></div>
+        <div class="col-xs-2 cv-top-border-2"></div>
+        <div class="col-xs-5 cv-top-border-3"></div>
+    </div>
 </div>
 
-<h2>Web Software Developer</h2>
-<h3><a id="pdf" href="#">Download PDF</a></h3>
-<h3><a href="mailto:name@yourdomain.com">name@yourdomain.com</a></h3>
-<h3>(313) - 867-5309</h3>
+
 <style>
+
+    #example ul {
+        width: 600px;
+        margin: 0 auto;
+        height: 115px;
+        position: relative;
+        overflow: hidden;
+    }
+    #example ul li {
+        list-style:none;
+        float:left;
+        font-size:24px;
+        margin-top:18px;
+        padding:10px;
+        width:36px;
+        margin-left:5px;
+        color:#000;
+    }
+    #example ul li:nth-of-type(1) {
+        background: #0b7c9c;
+        -webkit-transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+    }
+    #example ul li:nth-of-type(2)
+    {
+        background:#0e98c0;
+        -webkit-transform: rotate(10deg);
+        -moz-transform: rotate(10deg);
+    }
+    #example ul li:nth-of-type(3)
+    {
+        background: #35bfe7;
+        -webkit-transform: rotate(15deg);
+        -moz-transform: rotate(15deg);
+    }
+    #example ul li:nth-of-type(4)
+    {
+        top:40px;
+        left:145px;
+        background: #6acdea;
+        -webkit-transform: rotate(25deg);
+        -moz-transform: rotate(25deg);
+    }
+    #example ul li:nth-of-type(5) {
+        background: #7ee0fc;
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+    }
+    #example ul li:nth-of-type(6) {
+         background: #45e8fb;
+         -webkit-transform: rotate(40deg);
+         -moz-transform: rotate(35deg);
+     }
+    #example ul li:nth-of-type(7) {
+        background: #45e8fb;
+        -webkit-transform: rotate(40deg);
+        -moz-transform: rotate(35deg);
+    }
+    #example ul li:nth-of-type(8){
+        background: #8cd4eb;
+        -webkit-transform: rotate(40deg);
+        -moz-transform: rotate(35deg);
+    }
+    #example ul li:nth-of-type(9) {
+        background: #8cd4eb;
+        -webkit-transform: rotate(40deg);
+        -moz-transform: rotate(35deg);
+    }
+    #example ul li:nth-of-type(10) {
+        background: #19bae9;
+        -webkit-transform: rotate(40deg);
+        -moz-transform: rotate(35deg);
+    }
+    #example ul li:nth-of-type(11) {
+        background: #19bae9;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+    }
+    #example ul li:nth-of-type(12) {
+         background: #0e98c0;
+         -webkit-transform: rotate(50deg);
+         -moz-transform: rotate(50deg);
+    }
+
+    #example ul li:nth-of-type(13) {
+        background: #0b7c9c;
+        -webkit-transform: rotate(55deg);
+        -moz-transform: rotate(55deg);
+    }
+
+
+    .cv-top-border-1{
+        border-bottom: solid 5px #00ffea;
+    }
+    .cv-top-border-2{
+        border-bottom: solid 5px #0000aa;
+    }
+    .cv-top-border-3{
+        border-bottom: solid 5px #00ffea;
+    }
 
     .cv .sub-title{
         text-transform: uppercase;
@@ -245,7 +385,7 @@ echo __FILE__; ?>
     }
 
 
-    a {
+    .cv a {
         color: #990003
     }
 
@@ -255,7 +395,7 @@ echo __FILE__; ?>
     }
     .border li {
         margin-bottom: 10px;
-        padding-left: 4px;
+        padding-left: 2px;
         border-radius: 5px;
         border-left: 10px solid #f05d22;
         box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
@@ -269,6 +409,7 @@ echo __FILE__; ?>
     .border li:nth-child(4){border-color: #1ccfc9;}
     .border li:nth-child(5){border-color: #493224;}
     .border li:nth-child(6){border-color: #315dbd;}
+    .border li:nth-child(7){border-color: #9e0505;}
     .border li:hover {
         border-left: 10px solid transparent;
     }
@@ -289,6 +430,9 @@ echo __FILE__; ?>
     }
     .border li:nth-child(6):hover {
         border-right: 10px solid #315DBD;
+    }
+    .border li:nth-child(7):hover {
+        border-right: 10px solid #9e0505;
     }
 
     body {
@@ -321,7 +465,6 @@ echo __FILE__; ?>
     }
 
     p {
-        font-size: 100%;
         line-height: 18px;
         padding-right: 3em;
     }
@@ -342,5 +485,14 @@ echo __FILE__; ?>
 
     a#pdf:hover {
         background: #222;
+    }
+
+    @media print {
+        footer, .top-bar{
+            display: none;
+        }
+        .not-print{ /*TODO :: delete when site will be deployed*/
+            display: none;
+        }
     }
 </style>
