@@ -15,51 +15,59 @@ echo __FILE__; ?>
     <div class="row">
         <div class="col-sm-6">
             <h3 class="sub-title"><span class="fa fa-info-circle fa-2x"></span> Personal details</h3>
-            <div class="cv-item">
-                <div class="col-xs-4">
+            <div class="cv-personal-block">
+                <div class="col-xs-3 cv-personal-item">
                     <p>Name</p>
                 </div>
-                <div class="col-xs-8">
+                <div class="col-xs-9">
                     <p><span class="fa fa-id-card"></span> Denis Yevduschenko</p>
                 </div>
             </div>
             <div class="cv-item">
-                <div class="col-xs-4">
+                <div class="col-xs-3 cv-personal-item">
                     <p>D.O.B</p>
                 </div>
-                <div class="col-xs-8">
+                <div class="col-xs-9">
                     <p><span class="fa fa-calendar-o"></span> 15.03.1989</p>
                 </div>
             </div>
             <div class="cv-item">
-                <div class="col-xs-4">
+                <div class="col-xs-3 cv-personal-item">
                     <p>Web</p>
                 </div>
-                <div class="col-xs-8">
+                <div class="col-xs-9">
                     <p><span class="fa fa-globe"></span> http://www.blog.com</p>
                 </div>
             </div>
             <div class="cv-item">
-                <div class="col-xs-4">
+                <div class="col-xs-3 cv-personal-item">
                     <p>Contact</p>
                 </div>
-                <div class="col-xs-8">
+                <div class="col-xs-9">
                     <p><span class="fa fa-volume-control-phone"></span> +380669928899</p>
                 </div>
             </div>
             <div class="cv-item">
-                <div class="col-xs-4">
+                <div class="col-xs-3 cv-personal-item">
                     <p>E-Mail</p>
                 </div>
-                <div class="col-xs-8">
-                    <p><span class="fa fa-envelope-o"></span>d.yevduschenko@gmail.com</p>
+                <div class="col-xs-9">
+                    <p><span class="fa fa-envelope-o"></span> d.yevduschenko@gmail.com</p>
+                </div>
+            </div>
+            <div class="cv-item">
+                <div class="col-xs-3 cv-personal-item">
+                    <p>Skype</p>
+                </div>
+                <div class="col-xs-9">
+                    <p><span class="fa fa-skype"></span> borntow1n</p>
                 </div>
             </div>
         </div>
         <div class="col-sm-6">
             <h3 class="sub-title"><span class="fa fa-graduation-cap fa-2x"></span> Education</h3>
             <div class="cv-item">
-                <div class="col-xs-5">
+                <div class="col-xs-5 cv-education-item">
                     <p>University</p>
                 </div>
                 <div class="col-xs-7">
@@ -94,39 +102,53 @@ echo __FILE__; ?>
             </div>
         </div>
     </div>
-    <hr>
     <div class="row">
         <div class="col-xs-12">
             <h3  class="sub-title"><span class="fa fa-bullseye fa-2x"></span> Objective</h3>
         </div>
         <div class="col-xs-12">
-            <p> I am interested in working as a web developer and my goal is to get good opportunities on the same profile in IT-field. I want to improve my level of knowledge and practical skills. </p>
+            <div class="container">
+                <p>I am interested in working as a web developer and my goal is to get good opportunities on the same profile in IT-field. I want to improve my level of knowledge and practical skills. </p>
+            </div>
         </div>
     </div>
-    <hr>
     <div class="row">
         <div class="col-xs-12">
             <h3 class="sub-title"><span class="fa fa-briefcase fa-2x"></span> Experience</h3>
         </div>
-        <div class="col-xs-4 col-lg-3">
-            <h4>Grusha.ua</h4>
-            <p>Oct 2016 - present</p>
-        </div>
-        <div class="col-xs-8 col-lg-9">
-            <h4>Web developer</h4>
-            <p>Intrinsicly enable optimal core competencies through corporate relationships.
-            Phosfluorescently implement worldwide vortals and client-focused imperatives.
-            Conveniently initiate virtual paradigms and top-line convergence. </p>
-        </div>
-        <div class="col-xs-4 col-lg-3">
-            <h4>Intime LLC</h4>
-            <p>Aug 2012 - Oct 2016</p>
-        </div>
-        <div class="col-xs-8 col-lg-9">
-            <h4>Operator</h4>
+        <div class="container">
+            <div class="col-xs-4 col-lg-3">
+                <h4 class="job-company">Grusha.ua</h4>
+                <p class="job-timeline">Oct 2016 - present</p>
+            </div>
+            <div class="col-xs-8 col-lg-9">
+                <h4>Web developer</h4>
+                <p>Intrinsicly enable optimal core competencies through corporate relationships.
+                Phosfluorescently implement worldwide vortals and client-focused imperatives.
+                Conveniently initiate virtual paradigms and top-line convergence. </p>
+            </div>
+            <div class="col-xs-4 col-lg-3">
+                <h4 class="job-company">Intime LLC</h4>
+                <p class="job-timeline">Aug 2012 - Oct 2016</p>
+            </div>
+            <div class="col-xs-8 col-lg-9">
+                <h4>Operator</h4>
+            </div>
         </div>
     </div>
-    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <h3 class="sub-title"><span class="fa fa-language fa-2x"></span> Languages</h3>
+        </div>
+        <div class="container">
+            <div class="col-xs-4 col-lg-3">
+                <h4>English</h4>
+            </div>
+            <div class="col-xs-8 col-lg-9">
+                <h4>Upper-intermediate</h4>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-xs-6">
             <h3 class="sub-title"><span class="fa fa-user-circle-o fa-2x"></span> Profile</h3>
@@ -165,23 +187,36 @@ echo __FILE__; ?>
         </div>
         <div class="col-xs-6">
             <h3 class="sub-title"><span class="fa fa-wrench fa-2x"></span> Skills</h3>
-            <div class="yui-u">
-                <ul class="talent">
-                    <li>XHTML</li>
-                    <li>CSS</li>
-                    <li class="last">Javascript</li>
-                </ul>
-
-                <ul class="talent">
-                    <li>Jquery</li>
-                    <li>PHP</li>
-                    <li class="last">CVS / Subversion</li>
-                </ul>
-
-                <ul class="talent">
-                    <li>OS X</li>
-                    <li>Windows XP/Vista</li>
-                    <li class="last">Linux</li>
+            <div class="col-xs-8">
+                <h2>Technical</h2>
+                <div class="col-xs-6">
+                    <ul class="border">
+                        <li>PHP</li>
+                        <li>HTML, CSS</li>
+                        <li>Javascript</li>
+                        <li>Jquery</li>
+                        <li>Yii2</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div class="col-xs-6">
+                    <ul class="border">
+                        <li>Java (SE,EE)</li>
+                        <li>Hibernate</li>
+                        <li>Maven</li>
+                        <li>OOP, TDD</li>
+                        <li>jUnit</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <h2>Soft</h2>
+                <ul class="border">
+                    <li>Adaptability</li>
+                    <li>Teamwork skills</li>
+                    <li>Responsibility</li>
+                    <li>Self-Motivation</li>
+                    <li>Punctual</li>
                 </ul>
             </div>
         </div>
@@ -201,95 +236,76 @@ echo __FILE__; ?>
         border-bottom: dodgerblue solid 2px;
     }
 
+    .cv .cv-personal-item{
+         color: rgba(2, 2, 7, 0.54);
+    }
+
+    .cv-education-item{
+        font-size: larger;
+    }
+
 
     a {
         color: #990003
     }
 
-
-
-
-
-
-
-
-
-    .msg {
-        padding: 10px;
-        background: #222;
-        position: relative;
+    .border {
+        list-style: none;
+        padding: 0;
+    }
+    .border li {
+        margin-bottom: 10px;
+        padding-left: 4px;
+        border-radius: 5px;
+        border-left: 10px solid #f05d22;
+        box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+        -2px -2px 5px 0 rgba(0,0,0,.1),
+        2px 2px 5px 0 rgba(0,0,0,.1),
+        -2px 2px 5px 0 rgba(0,0,0,.1);
+        transition: 0.3s all linear;
+    }
+    .border li:nth-child(2){border-color: #8bc63e;}
+    .border li:nth-child(3){border-color: #fcba30;}
+    .border li:nth-child(4){border-color: #1ccfc9;}
+    .border li:nth-child(5){border-color: #493224;}
+    .border li:nth-child(6){border-color: #315dbd;}
+    .border li:hover {
+        border-left: 10px solid transparent;
+    }
+    .border li:nth-child(1):hover {
+        border-right: 10px solid #f05d22;
+    }
+    .border li:nth-child(2):hover {
+        border-right: 10px solid #8bc63e;
+    }
+    .border li:nth-child(3):hover {
+        border-right: 10px solid #fcba30;
+    }
+    .border li:nth-child(4):hover {
+        border-right: 10px solid #1ccfc9;
+    }
+    .border li:nth-child(5):hover {
+        border-right: 10px solid #493224;
+    }
+    .border li:nth-child(6):hover {
+        border-right: 10px solid #315DBD;
     }
 
-    .msg h1 {
-        color: #fff;
-    }
-
-    .msg a {
-        margin-left: 20px;
-        background: #408814;
-        color: white;
-        padding: 4px 8px;
-        text-decoration: none;
-    }
-
-    .msg a:hover {
-        background: #266400;
-    }
-
-    /* //-- yui-grids style overrides -- */
     body {
         font-family: Georgia;
         color: #444;
     }
 
-    #inner {
-        padding: 10px 80px;
-        margin: 80px auto;
-        background: #f5f5f5;
-        border: solid #666;
-        border-width: 8px 0 2px 0;
+    .job-company{
+        color: dodgerblue;
     }
-
-    .yui-gf {
-        margin-bottom: 2em;
-        padding-bottom: 2em;
-        border-bottom: 1px solid #ccc;
-    }
-
-    /* //-- header, body, footer -- */
-    #hd {
-        margin: 2.5em 0 3em 0;
-        padding-bottom: 1.5em;
-        border-bottom: 1px solid #ccc
+    .job-timeline{
+        color: rgba(2, 2, 7, 0.54)
     }
 
     #hd h2 {
         text-transform: uppercase;
         letter-spacing: 2px;
-    }
-
-    #bd, #ft {
-        margin-bottom: 2em;
-    }
-
-    /* //-- footer -- */
-    #ft {
-        padding: 1em 0 5em 0;
-        font-size: 92%;
-        border-top: 1px solid #ccc;
-        text-align: center;
-    }
-
-    #ft p {
-        margin-bottom: 0;
-        text-align: center;
-    }
-
-    /* //-- core typography and style -- */
-    #hd h1 {
-        font-size: 48px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
     }
 
     h2 {
@@ -310,44 +326,9 @@ echo __FILE__; ?>
         padding-right: 3em;
     }
 
-
-
     a:hover {
         text-decoration: none;
     }
-
-    strong {
-        font-weight: bold;
-    }
-
-    li {
-        line-height: 24px;
-        border-bottom: 1px solid #ccc;
-    }
-
-    p.enlarge {
-        font-size: 144%;
-        padding-right: 6.5em;
-        line-height: 24px;
-    }
-
-    p.enlarge span {
-        color: #000
-    }
-
-    .contact-info {
-        margin-top: 7px;
-    }
-
-    .first h2 {
-        font-style: italic;
-    }
-
-    .last {
-        border-bottom: 0
-    }
-
-    /* //-- section styles -- */
 
     a#pdf {
         display: block;
@@ -361,72 +342,5 @@ echo __FILE__; ?>
 
     a#pdf:hover {
         background: #222;
-    }
-
-    .job {
-        position: relative;
-        margin-bottom: 1em;
-        padding-bottom: 1em;
-        border-bottom: 1px solid #ccc;
-    }
-
-    .job h4 {
-        position: absolute;
-        top: 0.35em;
-        right: 0
-    }
-
-    .job p {
-        margin: 0.75em 0 3em 0;
-    }
-
-    .last {
-        border: none;
-    }
-
-    .skills-list {
-    }
-
-    .skills-list ul {
-        margin: 0;
-    }
-
-    .skills-list li {
-        margin: 3px 0;
-        padding: 3px 0;
-    }
-
-    .skills-list li span {
-        font-size: 152%;
-        display: block;
-        margin-bottom: -2px;
-        padding: 0
-    }
-
-    .talent {
-        width: 32%;
-        float: left
-    }
-
-    .talent h2 {
-        margin-bottom: 6px;
-    }
-
-    #srt-ttab {
-        margin-bottom: 100px;
-        text-align: center;
-    }
-
-    #srt-ttab img.last {
-        margin-top: 20px
-    }
-
-    /* --// override to force 1/8th width grids -- */
-    .yui-gf .yui-u {
-        width: 80.2%;
-    }
-
-    .yui-gf div.first {
-        width: 12.3%;
     }
 </style>

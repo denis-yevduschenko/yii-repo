@@ -52,18 +52,19 @@ MasonryAsset::register($this);
     <div class="container">
         <h2>Last <?=$quantity?> posts</h2>
     </div>
-    <div class="container-fluid masonry" data-columns>
-        <?foreach ($posts as $post){?>
-            <div class="item">
-                <div class="thumbnail">
-                    <img src="<?=$post->imagepath?>" class="img-responsive" alt="">
-                    <div class="caption">
-                        <h3><?=Html::encode($post->title)?></h3>
-                        <p><?=Html::encode($post->intro_text)?></p>
-                        <p><a href="<?=Yii::$app->urlManager->createUrl(['post/article', 'id' => $post->id])?>" class="btn btn-success btn-block" role="button">Read more <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
+    <div class="row">
+        <div class="container-fluid masonry" data-columns>
+            <?foreach ($posts as $post){?>
+                <div class="item">
+                    <div class="thumbnail">
+                        <img src="<?=$post->imagepath?>" class="img-responsive" alt="">
+                        <div class="caption">
+                            <h3><?=Html::encode($post->title)?></h3>
+                            <p><?=Html::encode($post->intro_text)?></p>
+                            <p><a href="<?=Yii::$app->urlManager->createUrl(['post/article', 'id' => $post->id])?>" class="btn btn-success btn-block" role="button">Read more <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?}?>
+            <?}?>
+        </div>
     </div>
-
