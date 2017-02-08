@@ -22,11 +22,22 @@ $this->registerMetaTag([
     <div class="col-sm-2 hidden-xs"><h2><small><?=$post->date?></small></h2></div>
 </div><hr>
 <div class="row">
+    <div class="col-xs-12 parent">
+        <div class="col-xs-12 col-sm-6">
+            <?=$post->intro_text?>
+        </div>
+        <div class="hidden-xs col-sm-6">
+            <img src="<?=$post->imagepath?>" class ="img-thumbnail pull-right">
+
+        </div>
+    </div>
     <div class="col-xs-12">
-        <img src="<?=$post->imagepath?>" class ="img-thumbnail pull-right">
         <?=$post->full_text?>
     </div>
 </div>
-
-
+    <style>
+        .parent{
+            vertical-align: middle;
+        }
+    </style>
 <?php echo "<pre>";print_r($post);echo "</pre>";?>

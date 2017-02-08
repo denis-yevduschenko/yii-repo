@@ -41,7 +41,7 @@ CategoryAsset::register($this);?>
     <div class="col-xs-10">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h4><?=Html::encode($post->title)?></h4>
+                <h4><a href="<?=Yii::$app->urlManager->createUrl(['post/article', 'id' => $post->id])?>"><?=Html::encode($post->title)?></a></h4>
             </div>
             <div class="panel-body content">
                 <div class="hidden-xs col-sm-3">
@@ -62,8 +62,6 @@ CategoryAsset::register($this);?>
         </div>
     </div>
 <?}?>
-
-<?echo "<pre>";print_r($posts);echo "</pre>";?>
 
 <script>
     $('.pull-down').each(function () {

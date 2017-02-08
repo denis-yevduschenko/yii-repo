@@ -111,3 +111,7 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.panel-heading a{
+    color:white;
+}

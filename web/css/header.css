@@ -15,7 +15,7 @@
     border-bottom: 1px solid #fff;
 }
 
-.btn-primary {
+#header .btn-primary {
     padding: 8px 20px;
     background: #c52d2f;
     color: #fff;
@@ -24,19 +24,19 @@
     margin-top: 10px;
 }
 
-.btn-primary:hover, .btn-primary:focus {
+#header .btn-primary:hover, .btn-primary:focus {
     background: #c52d2f;
     outline: none;
     box-shadow: none;
 }
 
-.btn-transparent {
+#header .btn-transparent {
     border: 3px solid #fff;
     background: transparent;
     color: #fff;
 }
 
-.btn-transparent:hover {
+#header .btn-transparent:hover {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
