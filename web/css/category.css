@@ -1,0 +1,16 @@
+
+.panel-info > .info-title {
+    border-bottom: 4px solid #c52f31;
+    color: white;
+    background-color: #c52f31;
+    border-color: #4f4f4f;
+}
+
+.info-block {
+    background: rgb(245, 245, 245);
+    color: #cccccc;
+}
+
+.info-block p {
+    border-bottom: 2px solid white;
+}
