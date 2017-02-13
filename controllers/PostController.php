@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 
+use app\models\Comments;
 use app\models\LoginForm;
 use app\models\Posts;
 use app\models\RegisterForm;
@@ -45,8 +46,12 @@ class PostController extends AppController{
         if (!$post){
             throw new NotFoundHttpException('Article not found');
         }
+        $comments = Comments::find()
+            ->where(['post_id' => $id])
+            ->all();
         return $this->render('article', [
-            'post' => $post
+            'post' => $post,
+            'comments' => $comments
         ]);
     }
 
