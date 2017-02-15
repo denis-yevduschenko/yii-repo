@@ -33,7 +33,9 @@ AppAsset::register($this);
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-xs-4">
-                    <div class="top-number"><p><i class="fa fa-envelope-o"></i> d.yevduschenko@gmail.com</p></div>
+                    <div class="top-number">
+                        <p><i class="fa fa-envelope-o"></i> d.yevduschenko@gmail.com</p>
+                    </div>
                 </div>
                 <div class="col-sm-6 col-xs-8">
                     <div class="social">
@@ -159,13 +161,13 @@ AppAsset::register($this);
                             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                                 <h3>Categories:</h3>
                                 <ul>
-                                    <li><a href=""><i class="fa fa-file"></i> News</a></li>
-                                    <li><a href=""><i class="fa fa-android"></i> Android</a></li>
-                                    <li><a href=""><i class="fa fa-code"></i> C#</a></li>
-                                    <li><a href=""><i class="fa fa-code"></i> Java</a></li>
-                                    <li><a href=""><i class="fa fa-book"></i> Books</a></li>
-                                    <li><a href=""><i class="fa fa-globe"></i> Web</a></li>
-                                    <li><a href=""><i class="fa fa-windows"></i> Windows</a></li>
+                                    <li><a href="<?=Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'News'])?>"><i class="fa fa-file"></i> News</a></li>
+                                    <li><a href="<?=Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'Android'])?>"><i class="fa fa-android"></i> Android</a></li>
+                                    <li><a href="<?=Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'PHP'])?>"><i class="fa fa-code"></i> PHP</a></li>
+                                    <li><a href="<?=Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'Java'])?>"><i class="fa fa-code"></i> Java</a></li>
+                                    <li><a href="<?=Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'Books'])?>"><i class="fa fa-book"></i> Books</a></li>
+                                    <li><a href="<?=Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'Web'])?>"><i class="fa fa-globe"></i> Web</a></li>
+                                    <li><a href="<?=Yii::$app->urlManager->createUrl(['/post/category', 'category' => 'Windows'])?>"><i class="fa fa-windows"></i> Windows</a></li>
                                 </ul>
                             </div>
 
@@ -181,7 +183,7 @@ AppAsset::register($this);
                                     </span>
                                     Twitter
                                 </a>
-                                <a href=""  target="_blank" title="GitHub">
+                                <a href="https://github.com/denis-yevduschenko"  target="_blank" title="GitHub">
                                     <span class="fa-stack fa-lg">
                                       <i class="fa fa-square-o fa-stack-2x"></i>
                                       <i class="fa fa-github fa-stack-1x"></i>
