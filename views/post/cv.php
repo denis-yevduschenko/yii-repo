@@ -1,3 +1,5 @@
+<?$this->registerCssFile('/css/singelton/cv.css', ['depends' => ['app\assets\AppAsset']]);?>
+
 <div class="container not-print">
     <div class="row">
         <div class="col-xs-8">
@@ -6,7 +8,6 @@
         </div>
         <div class="col-xs-4">
             <h3><p><a id="pdf" href="/upload/cv.pdf">Download  CV (PDF)</a></p></h3>
-
         </div>
     </div>
 </div>
@@ -15,7 +16,7 @@
         <div class="col-xs-5 cv-top-border-1"></div>
         <div class="col-xs-2 cv-top-border-2"></div>
         <div class="col-xs-5 cv-top-border-3"></div>
-        <div class="col-xs-12" id="example">
+        <div class="col-xs-12" id="title">
             <ul>
                 <li>W</li>
                 <li>E</li>
@@ -34,7 +35,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-6">
+        <div class="col-xs-12 col-sm-6">
             <h3 class="sub-title"><span class="fa fa-info-circle fa-2x"></span> Personal details</h3>
             <div class="cv-personal-block">
                 <div class="col-xs-3 cv-personal-item">
@@ -85,7 +86,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-6">
+        <div class="col-xs-12 col-sm-6">
             <h3 class="sub-title"><span class="fa fa-university fa-2x"></span> Education</h3>
             <div class="cv-item">
                 <div class="col-xs-5 cv-education-item">
@@ -172,15 +173,15 @@
         </div>
         <div class="container">
             <div class="col-xs-4 col-lg-3">
-                <h4>English</h4>
+                <h5>English</h5>
             </div>
             <div class="col-xs-8 col-lg-9">
-                <h4>Upper-intermediate</h4>
+                <h5>Upper-intermediate</h5>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-6">
+        <div class="col-xs-12 col-sm-6">
             <h3 class="sub-title"><span class="fa fa-user-circle-o fa-2x"></span> Profile</h3>
             <div class="col-xs-4">
                 <img src="/images/cv/cv-photo.jpg" class="img-circle" alt="Cinque Terre" width="100%" height="">
@@ -221,7 +222,7 @@
                     I adapt well to new situations.</p>
             </div>
         </div>
-        <div class="col-xs-6">
+        <div class="col-xs-12 col-sm-6">
             <h3 class="sub-title"><span class="fa fa-wrench fa-2x"></span> Skills</h3>
             <div class="col-xs-8">
                 <h2>Technical</h2>
@@ -266,233 +267,3 @@
         <div class="col-xs-5 cv-top-border-3"></div>
     </div>
 </div>
-
-
-<style>
-
-    #example ul {
-        width: 600px;
-        margin: 0 auto;
-        height: 115px;
-        position: relative;
-        overflow: hidden;
-    }
-    #example ul li {
-        list-style:none;
-        float:left;
-        font-size:24px;
-        margin-top:18px;
-        padding:10px;
-        width:36px;
-        margin-left:5px;
-        color:#000;
-    }
-    #example ul li:nth-of-type(1) {
-        background: #0b7c9c;
-        -webkit-transform: rotate(5deg);
-        -moz-transform: rotate(5deg);
-    }
-    #example ul li:nth-of-type(2)
-    {
-        background:#0e98c0;
-        -webkit-transform: rotate(10deg);
-        -moz-transform: rotate(10deg);
-    }
-    #example ul li:nth-of-type(3)
-    {
-        background: #35bfe7;
-        -webkit-transform: rotate(15deg);
-        -moz-transform: rotate(15deg);
-    }
-    #example ul li:nth-of-type(4)
-    {
-        top:40px;
-        left:145px;
-        background: #6acdea;
-        -webkit-transform: rotate(25deg);
-        -moz-transform: rotate(25deg);
-    }
-    #example ul li:nth-of-type(5) {
-        background: #7ee0fc;
-        -webkit-transform: rotate(30deg);
-        -moz-transform: rotate(30deg);
-    }
-    #example ul li:nth-of-type(6) {
-         background: #45e8fb;
-         -webkit-transform: rotate(40deg);
-         -moz-transform: rotate(35deg);
-     }
-    #example ul li:nth-of-type(7) {
-        background: #45e8fb;
-        -webkit-transform: rotate(40deg);
-        -moz-transform: rotate(35deg);
-    }
-    #example ul li:nth-of-type(8){
-        background: #8cd4eb;
-        -webkit-transform: rotate(40deg);
-        -moz-transform: rotate(35deg);
-    }
-    #example ul li:nth-of-type(9) {
-        background: #8cd4eb;
-        -webkit-transform: rotate(40deg);
-        -moz-transform: rotate(35deg);
-    }
-    #example ul li:nth-of-type(10) {
-        background: #19bae9;
-        -webkit-transform: rotate(40deg);
-        -moz-transform: rotate(35deg);
-    }
-    #example ul li:nth-of-type(11) {
-        background: #19bae9;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-    }
-    #example ul li:nth-of-type(12) {
-         background: #0e98c0;
-         -webkit-transform: rotate(50deg);
-         -moz-transform: rotate(50deg);
-    }
-
-    #example ul li:nth-of-type(13) {
-        background: #0b7c9c;
-        -webkit-transform: rotate(55deg);
-        -moz-transform: rotate(55deg);
-    }
-
-
-    .cv-top-border-1{
-        border-bottom: solid 5px #00ffea;
-    }
-    .cv-top-border-2{
-        border-bottom: solid 5px #0000aa;
-    }
-    .cv-top-border-3{
-        border-bottom: solid 5px #00ffea;
-    }
-
-    .cv .sub-title{
-        text-transform: uppercase;
-        color: dodgerblue;
-        border-bottom: dodgerblue solid 2px;
-    }
-
-    .cv .cv-personal-item{
-         color: rgba(2, 2, 7, 0.54);
-    }
-
-    .cv-education-item{
-        font-size: larger;
-    }
-
-
-    .cv a {
-        color: #990003
-    }
-
-    .border {
-        list-style: none;
-        padding: 0;
-    }
-    .border li {
-        margin-bottom: 10px;
-        padding-left: 2px;
-        border-radius: 5px;
-        border-left: 10px solid #f05d22;
-        box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
-        -2px -2px 5px 0 rgba(0,0,0,.1),
-        2px 2px 5px 0 rgba(0,0,0,.1),
-        -2px 2px 5px 0 rgba(0,0,0,.1);
-        transition: 0.3s all linear;
-    }
-    .border li:nth-child(2){border-color: #8bc63e;}
-    .border li:nth-child(3){border-color: #fcba30;}
-    .border li:nth-child(4){border-color: #1ccfc9;}
-    .border li:nth-child(5){border-color: #493224;}
-    .border li:nth-child(6){border-color: #315dbd;}
-    .border li:nth-child(7){border-color: #9e0505;}
-    .border li:hover {
-        border-left: 10px solid transparent;
-    }
-    .border li:nth-child(1):hover {
-        border-right: 10px solid #f05d22;
-    }
-    .border li:nth-child(2):hover {
-        border-right: 10px solid #8bc63e;
-    }
-    .border li:nth-child(3):hover {
-        border-right: 10px solid #fcba30;
-    }
-    .border li:nth-child(4):hover {
-        border-right: 10px solid #1ccfc9;
-    }
-    .border li:nth-child(5):hover {
-        border-right: 10px solid #493224;
-    }
-    .border li:nth-child(6):hover {
-        border-right: 10px solid #315DBD;
-    }
-    .border li:nth-child(7):hover {
-        border-right: 10px solid #9e0505;
-    }
-
-    body {
-        font-family: Georgia;
-        color: #444;
-    }
-
-    .job-company{
-        color: dodgerblue;
-    }
-    .job-timeline{
-        color: rgba(2, 2, 7, 0.54)
-    }
-
-    #hd h2 {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-
-    h2 {
-        font-size: 152%
-    }
-
-    h3, h4 {
-        font-size: 122%;
-    }
-
-    h1, h2, h3, h4 {
-        color: #333;
-    }
-
-    p {
-        line-height: 18px;
-        padding-right: 3em;
-    }
-
-    a:hover {
-        text-decoration: none;
-    }
-
-    a#pdf {
-        display: block;
-        float: left;
-        background: #666;
-        color: white;
-        padding: 6px 50px 6px 12px;
-        margin-bottom: 6px;
-        text-decoration: none;
-    }
-
-    a#pdf:hover {
-        background: #222;
-    }
-
-    @media print {
-        footer, .top-bar{
-            display: none;
-        }
-        .not-print{ /*TODO :: delete when site will be deployed*/
-            display: none;
-        }
-    }
-</style>

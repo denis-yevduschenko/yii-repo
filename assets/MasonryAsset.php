@@ -9,7 +9,7 @@ class MasonryAsset extends AssetBundle{
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/masonry.css',
+        'css/singelton/masonry.css',
     ];
     public $js = [
         '/js/salvattore.min.js',

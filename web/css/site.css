@@ -115,3 +115,30 @@ a.desc:after {
 .panel-heading a{
     color:white;
 }
+
+@media screen and (max-width: 50em) {
+    body, h5 {
+        font-size: 1.5em; /* 1,25em относительно основы в 16px к body в результате даст размер шрифта в 20px */
+    }
+    h3, h4 {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    body, h5 {
+        font-size: 1.25em;
+    }
+    h3, h4 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 30em) {
+    body, h5 {
+        font-size: 1.0em;
+    }
+    h3, h4 {
+        font-size: 1.25em;
+    }
+}

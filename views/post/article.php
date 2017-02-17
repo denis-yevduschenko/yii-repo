@@ -31,7 +31,7 @@ $this->registerMetaTag([
 
         </div>
     </div>
-    <div class="col-xs-12">
+    <div class="col-xs-12 text-full">
         <?=$post->full_text?>
     </div>
 </div>
@@ -66,6 +66,9 @@ $this->registerMetaTag([
         </div>
     <?}?>
 </div>
+    <script>
+        $('.text-full img').addClass("img-responsive");
+    </script>
     <style>
         .parent{
             vertical-align: middle;
