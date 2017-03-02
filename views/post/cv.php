@@ -7,7 +7,7 @@
             <p><a href="mailto:d.yevduschenko@gmail.com">My personal e-mail.</a></p>
         </div>
         <div class="col-xs-4">
-            <h3><p><a id="pdf" href="/upload/cv.pdf">Download  CV (PDF)</a></p></h3>
+            <h3 class="download-link"><p><a id="pdf" href="/upload/cv.pdf">Download  CV (PDF)</a></p></h3>
         </div>
     </div>
 </div>
@@ -71,7 +71,7 @@
             </div>
             <div class="cv-item">
                 <div class="col-xs-3 cv-personal-item">
-                    <p>E-Mail</p>
+                    <p>e-Mail</p>
                 </div>
                 <div class="col-xs-9">
                     <p><a href="mailto:d.yevduschenko@gmail.com"><span class="fa fa-envelope-o"></span> d.yevduschenko@gmail.com</a></p>
@@ -130,7 +130,7 @@
         </div>
         <div class="col-xs-12">
             <div class="container">
-                <p>I am interested in working as a web/Java developer and my goal is to get good opportunities on the same profile in IT-field. I want to improve my level of knowledge and practical skills. </p>
+                <p class="objective-text">I am interested in working as a web/Java developer and my goal is to get good opportunities on the same profile in IT-field. I want to improve my level of knowledge and practical skills. </p>
             </div>
         </div>
     </div>
@@ -144,14 +144,13 @@
                 <p class="job-timeline">Oct 2016 - present</p>
             </div>
             <div class="col-xs-8 col-lg-9">
-                <h4>Web developer</h4>
+                <h4 class="job-title">Web developer</h4>
                 <ul>
                     <li>Developing web code</li>
                     <li>Trouble shooting and problem solving</li>
                     <li>Creating web templates, working with database</li>
                     <li>Fixing existing bugs</li>
                     <li>Maintaining continuity throughout all websites both technically and creatively</li>
-
                 </ul>
             </div>
             <div class="col-xs-4 col-lg-3">
@@ -159,7 +158,7 @@
                 <p class="job-timeline">Aug 2012 - Oct 2016</p>
             </div>
             <div class="col-xs-8 col-lg-9">
-                <h4>Operator</h4>
+                <h4 class="job-title">Operator</h4>
                 <ul>
                     <li>Communication with clients</li>
                     <li>Data entry</li>

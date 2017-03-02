@@ -6,16 +6,15 @@ $this->params['breadcrumbs'][] = ['label' => 'Success Registration'];
 <div id="success">
     <div class="col-md-8 col-md-offset-2">
         <h2><p>Вы успешно зарегистрировались.</p></h2>
-        <a href="<?=Yii::$app->urlManager->createUrl(['/'])?>"><?=Icon::show('home',['class'=>'fa-2x']).'Home'?></a>
     </div>
 </div>
 <div class="container content">
     <div class="col-md-6 col-md-offset-3">
         <div class="testimonials">
             <div class="active item">
-                <blockquote><p>Denim you probably haven't heard of. Lorem ipsum dolor met consectetur adipisicing sit amet, consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met.</p></blockquote>
+                <blockquote><p>Hey everybody! I'm glad to see you on my blog. There will be lots of information about me, about web and other news in IT-field.</p></blockquote>
                 <div class="carousel-info">
-                    <img alt="" src="http://keenthemes.com/assets/bootsnipp/img1-small.jpg" class="pull-left">
+                    <img alt="" src="/images/cv/cv-photo-2.jpg" class="pull-left">
                     <div class="pull-left">
                         <span class="testimonials-name">Denis Yevduschenko</span>
                         <span class="testimonials-post">Web software developer</span>

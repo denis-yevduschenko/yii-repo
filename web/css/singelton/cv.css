@@ -5,7 +5,6 @@
     position: relative;
     overflow: hidden;
 }
-
 #title ul li {
     list-style: none;
     float: left;
@@ -16,25 +15,21 @@
     margin-left: 5px;
     color: #000;
 }
-
 #title ul li:nth-of-type(1) {
     background: #0b7c9c;
     -webkit-transform: rotate(5deg);
     -moz-transform: rotate(5deg);
 }
-
 #title ul li:nth-of-type(2) {
     background: #0e98c0;
     -webkit-transform: rotate(10deg);
     -moz-transform: rotate(10deg);
 }
-
 #title ul li:nth-of-type(3) {
     background: #35bfe7;
     -webkit-transform: rotate(15deg);
     -moz-transform: rotate(15deg);
 }
-
 #title ul li:nth-of-type(4) {
     top: 40px;
     left: 145px;
@@ -42,55 +37,46 @@
     -webkit-transform: rotate(25deg);
     -moz-transform: rotate(25deg);
 }
-
 #title ul li:nth-of-type(5) {
     background: #7ee0fc;
     -webkit-transform: rotate(30deg);
     -moz-transform: rotate(30deg);
 }
-
 #title ul li:nth-of-type(6) {
     background: #45e8fb;
     -webkit-transform: rotate(40deg);
     -moz-transform: rotate(35deg);
 }
-
 #title ul li:nth-of-type(7) {
     background: #45e8fb;
     -webkit-transform: rotate(40deg);
     -moz-transform: rotate(35deg);
 }
-
 #title ul li:nth-of-type(8) {
     background: #8cd4eb;
     -webkit-transform: rotate(40deg);
     -moz-transform: rotate(35deg);
 }
-
 #title ul li:nth-of-type(9) {
     background: #8cd4eb;
     -webkit-transform: rotate(40deg);
     -moz-transform: rotate(35deg);
 }
-
 #title ul li:nth-of-type(10) {
     background: #19bae9;
     -webkit-transform: rotate(40deg);
     -moz-transform: rotate(35deg);
 }
-
 #title ul li:nth-of-type(11) {
     background: #19bae9;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
 }
-
 #title ul li:nth-of-type(12) {
     background: #0e98c0;
     -webkit-transform: rotate(50deg);
     -moz-transform: rotate(50deg);
 }
-
 #title ul li:nth-of-type(13) {
     background: #0b7c9c;
     -webkit-transform: rotate(55deg);
@@ -100,11 +86,9 @@
 .cv-top-border-1 {
     border-bottom: solid 5px #00ffea;
 }
-
 .cv-top-border-2 {
     border-bottom: solid 5px #0000aa;
 }
-
 .cv-top-border-3 {
     border-bottom: solid 5px #00ffea;
 }
@@ -118,20 +102,16 @@
 .cv .cv-personal-item {
     color: rgba(2, 2, 7, 0.54);
 }
-
 .cv-education-item {
     font-size: larger;
 }
-
 .cv a {
     color: #990003
 }
-
 .border {
     list-style: none;
     padding: 0;
 }
-
 .border li {
     margin-bottom: 10px;
     padding-left: 2px;
@@ -143,66 +123,70 @@
     -2px 2px 5px 0 rgba(0, 0, 0, .1);
     transition: 0.3s all linear;
 }
-
 .border li:nth-child(2) {
     border-color: #8bc63e;
 }
-
 .border li:nth-child(3) {
     border-color: #fcba30;
 }
-
 .border li:nth-child(4) {
     border-color: #1ccfc9;
 }
-
 .border li:nth-child(5) {
     border-color: #493224;
 }
-
 .border li:nth-child(6) {
     border-color: #315dbd;
 }
-
 .border li:nth-child(7) {
     border-color: #9e0505;
 }
-
 .border li:hover {
     border-left: 10px solid transparent;
 }
-
 .border li:nth-child(1):hover {
     border-right: 10px solid #f05d22;
 }
-
 .border li:nth-child(2):hover {
     border-right: 10px solid #8bc63e;
 }
-
 .border li:nth-child(3):hover {
     border-right: 10px solid #fcba30;
 }
-
 .border li:nth-child(4):hover {
     border-right: 10px solid #1ccfc9;
 }
-
 .border li:nth-child(5):hover {
     border-right: 10px solid #493224;
 }
-
 .border li:nth-child(6):hover {
     border-right: 10px solid #315DBD;
 }
-
 .border li:nth-child(7):hover {
     border-right: 10px solid #9e0505;
 }
-
 body {
     font-family: Georgia;
     color: #444;
+}
+#hd h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+h3, h4 {
+    font-size: 1.75em;
+}
+h1, h2, h3, h4 {
+    color: #333;
+}
+p {
+    line-height: 20px;
+}
+a:hover {
+    text-decoration: none;
+}
+body, h5 {
+    font-size: 1.25em;  /* гибкая основа */
 }
 .cv{
     background: rgba(4, 246, 0, 0.05);
@@ -218,28 +202,13 @@ body {
     color: rgba(2, 2, 7, 0.54)
 }
 
-#hd h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
+p.objective-text{
+    width: 80%;
+    margin: 0 0 0 45px;
 }
-
-h3, h4 {
-    font-size: 2.0em;
+h4.job-title{
+    font-size: 1.5em;
 }
-
-h1, h2, h3, h4 {
-    color: #333;
-}
-
-p {
-    line-height: 18px;
-    padding-right: 3em;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
 a#pdf {
     display: block;
     float: left;
@@ -248,6 +217,7 @@ a#pdf {
     padding: 6px 50px 6px 12px;
     margin-bottom: 6px;
     text-decoration: none;
+    font-size: 0.5em;
 }
 
 a#pdf:hover {
@@ -264,12 +234,6 @@ a#pdf:hover {
     }
 }
 
-body, h5 {
-    font-size: 1.75em;  /* гибкая основа */
-}
-p {
-    /* 1,25em относительно основы в 16px к body в результате даст размер шрифта в 20px */
-}
 @media screen and (max-width: 50em) {
     body, h5 {
         font-size: 1.5em; /* 1,25em относительно основы в 16px к body в результате даст размер шрифта в 20px */

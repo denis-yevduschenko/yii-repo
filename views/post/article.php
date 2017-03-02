@@ -1,4 +1,5 @@
 <?php
+use app\components\LastPostsWidget;
 use yii\helpers\Html;
 
 $post->updateCounters(['hits' => 1]);
@@ -23,16 +24,126 @@ $this->registerMetaTag([
 </div><hr>
 <div class="row">
     <div class="col-xs-12 parent">
-        <div class="col-xs-12 col-sm-6">
-            <?=$post->intro_text?>
+        <div class="col-xs-12 col-sm-8">
+            <div class="row">
+                <?=$post->intro_text?>
+            </div>
         </div>
-        <div class="hidden-xs col-sm-6">
+        <div class="hidden-xs col-sm-4">
             <img src="<?=$post->imagepath?>" class ="img-thumbnail pull-right">
-
         </div>
     </div>
-    <div class="col-xs-12 text-full">
+    <div class="separator"></div>
+    <div class="col-xs-12 col-sm-8 text-full">
         <?=$post->full_text?>
+    </div>
+    <div class="hidden-xs col-sm-4">
+        <div class="last-posts wrapper">
+            <h2>Last 6 posts:</h2>
+            <?= LastPostsWidget::widget()?>
+        </div>
+        <style>
+            /*TODO:: fix style title*/
+            .last-posts{
+                text-align: center;
+                box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+                border-radius: 4px;
+                border: 1px solid #dddddd;
+            }
+            .last-posts h2{
+                background: black;
+                color: white;
+            }
+            .last-posts .wrapper{
+                margin:3em 0;
+            }
+            .last-posts a, .last-posts a:visited,.last-posts a:hover,.last-posts a:active{
+                -webkit-backface-visibility:hidden;
+                backface-visibility:hidden;
+                position:relative;
+                transition:0.5s color ease;
+                text-decoration:none;
+                color:#81b3d2;
+                font-size:1.0em;
+            }
+            .last-posts a:hover{
+                color:#c52d2f;
+            }
+            .last-posts a.before:before, .last-posts a.after:after{
+                content: "";
+                transition:0.5s all ease;
+                -webkit-backface-visibility:hidden;
+                backface-visibility:hidden;
+                position:absolute;
+            }
+            .last-posts a.before:before{
+                top:-0.25em;
+            }
+            .last-posts a.after:after{
+                bottom:-0.25em;
+            }
+            .last-posts a.before:before,.last-posts a.after:after{
+                height:3px;
+                height:0.21rem;
+                width:0;
+                background:#c52d2f;
+            }
+
+            .last-posts a.before:hover:before, .last-posts a.after:hover:after{
+                width:100%;
+            }
+            .last-posts .square{
+                box-sizing:border-box;
+                margin-left:-0.4em;
+                position:relative;
+                font-size:1.0em;
+                overflow:hidden;
+            }
+            .last-posts .square a{
+                position:static;
+                font-size:100%;
+                padding:0.2em 0.4em;
+            }
+            .last-posts .square:before,.last-posts .square:after{
+                content: "";
+                box-sizing:border-box;
+                transition:0.25s all ease;
+                -webkit-backface-visibility:hidden;
+                backface-visibility:hidden;
+                position:absolute;
+                width:3px;
+                width:0.21rem;
+                height:0;
+                background:#c52d2f;
+            }
+            .last-posts .square:before{
+                left:0;
+                bottom:-0.2em;
+            }
+            .last-posts .square.individual:before{
+                transition-delay:0.6s;
+            }
+            .last-posts .square:after{
+                right:0;
+                top:-0.2em;
+            }
+
+            .last-posts .square a:before{
+                left:0;
+                transition:0.25s all ease;
+            }
+            .last-posts .square a:after{
+                right:0;
+                transition:0.25s all ease;
+            }
+
+            .last-posts .square:hover:before,.square:hover:after{
+                height:calc(100% + 0.4em);
+            }
+            .last-posts .square:hover a:before,.square:hover a:after{
+                width:100%;
+            }
+        </style>
     </div>
 </div>
 <div class="row">
@@ -66,116 +177,8 @@ $this->registerMetaTag([
         </div>
     <?}?>
 </div>
-    <script>
-        $('.text-full img').addClass("img-responsive");
-    </script>
-    <style>
-        .parent{
-            vertical-align: middle;
-        }
+<script>
+    $('.text-full img').addClass("img-responsive");
+</script>
 
-        .panel-shadow {
-            box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
-        }
-        .panel-white {
-            border: 1px solid #dddddd;
-        }
-        .panel-white  .panel-heading {
-            color: #333;
-            background-color: #fff;
-            border-color: #ddd;
-        }
-        .panel-white  .panel-footer {
-            background-color: #fff;
-            border-color: #ddd;
-        }
-
-        .post .post-heading {
-            height: 95px;
-            padding: 20px 15px;
-        }
-        .post .post-heading .avatar {
-            width: 60px;
-            height: 60px;
-            display: block;
-            margin-right: 15px;
-        }
-        .post .post-heading .meta .title {
-            margin-bottom: 0;
-        }
-        .post .post-heading .meta .title a {
-            color: black;
-        }
-        .post .post-heading .meta .title a:hover {
-            color: #aaaaaa;
-        }
-        .post .post-heading .meta .time {
-            margin-top: 8px;
-            color: #999;
-        }
-        .post .post-image .image {
-            width: 100%;
-            height: auto;
-        }
-        .post .post-description {
-            padding: 15px;
-        }
-        .post .post-description p {
-            font-size: 14px;
-        }
-        .post .post-description .stats {
-            margin-top: 20px;
-        }
-        .post .post-description .stats .stat-item {
-            display: inline-block;
-            margin-right: 15px;
-        }
-        .post .post-description .stats .stat-item .icon {
-            margin-right: 8px;
-        }
-        .post .post-footer {
-            border-top: 1px solid #ddd;
-            padding: 15px;
-        }
-        .post .post-footer .input-group-addon a {
-            color: #454545;
-        }
-        .post .post-footer .comments-list {
-            padding: 0;
-            margin-top: 20px;
-            list-style-type: none;
-        }
-        .post .post-footer .comments-list .comment {
-            display: block;
-            width: 100%;
-            margin: 20px 0;
-        }
-        .post .post-footer .comments-list .comment .avatar {
-            width: 35px;
-            height: 35px;
-        }
-        .post .post-footer .comments-list .comment .comment-heading {
-            display: block;
-            width: 100%;
-        }
-        .post .post-footer .comments-list .comment .comment-heading .user {
-            font-size: 14px;
-            font-weight: bold;
-            display: inline;
-            margin-top: 0;
-            margin-right: 10px;
-        }
-        .post .post-footer .comments-list .comment .comment-heading .time {
-            font-size: 12px;
-            color: #aaa;
-            margin-top: 0;
-            display: inline;
-        }
-        .post .post-footer .comments-list .comment .comment-body {
-            margin-left: 50px;
-        }
-        .post .post-footer .comments-list .comment > .comments-list {
-            margin-left: 50px;
-        }
-    </style>
 <?php echo "<pre>";print_r($comments);echo "</pre>";?>

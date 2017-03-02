@@ -88,7 +88,7 @@ AppAsset::register($this);
                     ['label' => 'Categories', 'url' => [Yii::$app->urlManager->createUrl(['/post/categories'])]],
                 ]
             ],
-            ['label' => Icon::show('info-circle',['class'=>'fa-1x']).'About', 'url' => [Yii::$app->urlManager->createUrl(['/site/about'])]],
+            ['label' => Icon::show('info-circle',['class'=>'fa-1x']).'AboutMe', 'url' => [Yii::$app->urlManager->createUrl(['/post/cv'])]],
             ['label' => Icon::show('commenting-o',['class'=>'fa-1x']).'Contact', 'url' => [Yii::$app->urlManager->createUrl(['/site/contact'])]],
             Yii::$app->user->isGuest ? (
                 ['label' => Icon::show('sign-in',['class'=>'fa-1x']).'Login', 'url' => [Yii::$app->urlManager->createUrl(['/post/login'])]]
