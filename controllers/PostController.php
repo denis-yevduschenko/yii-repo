@@ -22,9 +22,14 @@ class PostController extends AppController{
             ->orderBy(["id" => SORT_DESC])
             ->limit($quantity)
             ->all();
+        $categories = Posts::find()
+            ->select('category')
+            ->groupBy('category')
+            ->all();
         return $this->render('index', [
             'posts' => $posts,
-            'quantity' => $quantity
+            'quantity' => $quantity,
+            'categories' => $categories
         ]);
     }
 

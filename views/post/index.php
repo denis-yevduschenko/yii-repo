@@ -68,3 +68,64 @@ MasonryAsset::register($this);
             <?}?>
         </div>
     </div>
+    <div class="container">
+        <h2>Categories:</h2>
+    </div>
+    <div class="row">
+        <?php foreach ($categories as $category){?>
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <a href="<?=Yii::$app->urlManager->createUrl(['post/category', 'category' => $category->category])?>">
+                    <h2><?=$category->category?><span class="badge badge-success"><?=$count?></span></h2>
+                </a>
+            </div>
+        <?}?>
+    </div>
+    <!--TODO:: finish category slider*/-->
+    <div class="container">
+        <div class="row">
+            <h2>Media Slider Carousel BS3</h2>
+        </div>
+        <div class='row'>
+            <div class='col-md-8'>
+                <div class="carousel slide media-carousel" id="media">
+                    <div class="carousel-inner">
+                        <div class="item  active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a class="thumbnail" href="#">link1</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a class="thumbnail" href="#">link2</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a class="thumbnail" href="#">link3</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a class="thumbnail" href="#">link4</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a class="thumbnail" href="#">link5</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a class="thumbnail" href="#">link6</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a class="thumbnail" href="#">link7</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a data-slide="prev" href="#media" class="left carousel-control"></a>
+                    <a data-slide="next" href="#media" class="right carousel-control"></a>
+                </div>
+            </div>
+        </div>
+    </div>
