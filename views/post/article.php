@@ -1,4 +1,5 @@
 <?php
+use app\components\LastCurrentCommentsWidget;
 use app\components\LastPostsWidget;
 use yii\helpers\Html;
 
@@ -30,28 +31,37 @@ $this->registerMetaTag([
             </div>
         </div>
         <div class="hidden-xs col-sm-4">
-            <img src="<?=$post->imagepath?>" class ="img-thumbnail pull-right">
+            <div class="row">
+                <img src="<?=$post->imagepath?>" class ="img-thumbnail pull-right">
+            </div>
         </div>
     </div>
     <div class="separator"></div>
-    <div class="col-xs-12 col-sm-8 text-full">
+    <div class="col-sm-12 col-md-8 text-full">
         <?=$post->full_text?>
     </div>
-    <div class="hidden-xs col-sm-4">
+    <div class="hidden-sm col-md-4" data-spy="affix" data-offset-top="450" data-offset-bottom="450">
         <div class="last-posts wrapper">
-            <h2>Last 6 posts:</h2>
             <?= LastPostsWidget::widget()?>
         </div>
         <style>
-            /*TODO:: fix style title*/
+            .affix {
+                top: 20px;
+                right: 20px;
+            }
+            .last-comments h2{
+                text-align: center;
+                color: #c52d2f;
+            }
+            /*TODO:: fix image*/
             .last-posts{
                 text-align: center;
                 box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
                 border-radius: 4px;
                 border: 1px solid #dddddd;
+                background: black;
             }
             .last-posts h2{
-                background: black;
                 color: white;
             }
             .last-posts .wrapper{
@@ -144,10 +154,17 @@ $this->registerMetaTag([
                 width:100%;
             }
         </style>
+
+        <div class="last-comments wrapper">
+            <div class="row">
+                <?= LastCurrentCommentsWidget::widget(['postId' => $post->id])?>
+            </div>
+        </div>
+        
     </div>
 </div>
 <div class="row">
-    <? foreach ($comments as $comment){?>
+    <?foreach ($comments as $comment){?>
         <div class="col-sm-8">
             <div class="panel panel-white post panel-shadow">
                 <div class="post-heading">
@@ -180,5 +197,3 @@ $this->registerMetaTag([
 <script>
     $('.text-full img').addClass("img-responsive");
 </script>
-
-<?php echo "<pre>";print_r($comments);echo "</pre>";?>

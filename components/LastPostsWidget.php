@@ -23,6 +23,10 @@ class LastPostsWidget extends Widget{
             $element = Html::tag('span', $element, ['class' => "square"]);
             $list .= Html::tag('p', $element);
         }
+        if($list){
+            $title =Html::tag('h2', 'Last 6 posts:');
+            $list = $title.$list;
+        }
         return $list;
     }
 }
