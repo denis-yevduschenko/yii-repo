@@ -16,16 +16,8 @@ class PostController extends AppController{
     
     public function actionIndex(){
         $quantity = 6;
-        $posts = Posts::find()
-            ->select('id, title, img, intro_text')
-            ->where(['hide' => 0])
-            ->orderBy(["id" => SORT_DESC])
-            ->limit($quantity)
-            ->all();
-        $categories = Posts::find()
-            ->select('category')
-            ->groupBy('category')
-            ->all();
+        $posts = Posts::getLatestPosts($quantity);
+        $categories = Posts::getCategories();
         return $this->render('index', [
             'posts' => $posts,
             'quantity' => $quantity,
@@ -51,9 +43,7 @@ class PostController extends AppController{
         if (!$post){
             throw new NotFoundHttpException('Article not found');
         }
-        $comments = Comments::find()
-            ->where(['post_id' => $id])
-            ->all();
+        $comments = Comments::getCommentsCurrentPost($id);
         return $this->render('article', [
             'post' => $post,
             'comments' => $comments
@@ -61,10 +51,7 @@ class PostController extends AppController{
     }
 
     public function actionCategories(){
-        $categories = Posts::find()
-            ->select('category')
-            ->groupBy('category')
-            ->all();
+        $categories = Posts::getCategories();
         
         if(!empty($categories)){
             return $this->render('categories', [

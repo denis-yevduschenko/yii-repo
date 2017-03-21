@@ -35,5 +35,21 @@ class Posts extends ActiveRecord{
     public static function retrieveQuantityPostsCategory($category){
         return Posts::find()->where(['category' => $category, 'hide' => '0'])->count();
     }
+
+    public static function getLatestPosts($quantity){
+        return Posts::find()
+            ->select('id, title, img, intro_text')
+            ->where(['hide' => 0])
+            ->orderBy(["id" => SORT_DESC])
+            ->limit($quantity)
+            ->all();
+    }
+
+    public static function getCategories(){
+        return Posts::find()
+            ->select('category')
+            ->groupBy('category')
+            ->all();
+    }
 }
 ?>

@@ -165,7 +165,7 @@
 .border li:nth-child(7):hover {
     border-right: 10px solid #9e0505;
 }
-body {
+body .cv {
     font-family: Georgia;
     color: #444;
 }
@@ -173,19 +173,19 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-h3, h4 {
+.cv h3, .cv h4 {
     font-size: 1.75em;
 }
-h1, h2, h3, h4 {
+.cv h1, .cv h2, .cv h3, .cv h4 {
     color: #333;
 }
-p {
+.cv p {
     line-height: 20px;
 }
-a:hover {
+a:hover .cv {
     text-decoration: none;
 }
-body, h5 {
+body .cv , h5 .cv {
     font-size: 1.25em;  /* гибкая основа */
 }
 .cv{
@@ -194,19 +194,19 @@ body, h5 {
     -moz-box-shadow: inset 0px 0px 47px 18px rgba(0,0,0,0.4);
     box-shadow: inset 0px 0px 47px 18px rgba(0,0,0,0.4);
 }
-.job-company {
+.cv .job-company {
     color: dodgerblue;
 }
 
-.job-timeline {
+.cv .job-timeline {
     color: rgba(2, 2, 7, 0.54)
 }
 
-p.objective-text{
+.cv p.objective-text{
     width: 80%;
     margin: 0 0 0 45px;
 }
-h4.job-title{
+.cv h4.job-title{
     font-size: 1.5em;
 }
 a#pdf {
@@ -235,16 +235,16 @@ a#pdf:hover {
 }
 
 @media screen and (max-width: 50em) {
-    body, h5 {
+    body.cv , .cv h5 {
         font-size: 1.5em; /* 1,25em относительно основы в 16px к body в результате даст размер шрифта в 20px */
     }
-    h3, h4 {
+    .cv h3, .cv h4 {
         font-size: 1.8em;
     }
 }
 
 @media screen and (max-width: 40em) {
-    body, h5 {
+    body .cv, .cv h5 {
         font-size: 1.25em;
     }
     h3, h4 {
@@ -253,10 +253,10 @@ a#pdf:hover {
 }
 
 @media screen and (max-width: 30em) {
-    body, h5 {
+    body.cv , .cv h5 {
         font-size: 1.0em;
     }
-    h3, h4 {
+    .cv h3, .cv h4 {
         font-size: 1.25em;
     }
 }

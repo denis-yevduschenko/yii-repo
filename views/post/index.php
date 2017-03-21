@@ -68,64 +68,46 @@ MasonryAsset::register($this);
             <?}?>
         </div>
     </div>
-    <div class="container">
-        <h2>Categories:</h2>
-    </div>
-    <div class="row">
-        <?php foreach ($categories as $category){?>
-            <div class="col-xs-12 col-sm-12 col-md-6">
-                <a href="<?=Yii::$app->urlManager->createUrl(['post/category', 'category' => $category->category])?>">
-                    <h2><?=$category->category?><span class="badge badge-success"><?=$count?></span></h2>
-                </a>
-            </div>
-        <?}?>
-    </div>
     <!--TODO:: finish category slider*/-->
-    <div class="container">
-        <div class="row">
-            <h2>Media Slider Carousel BS3</h2>
-        </div>
-        <div class='row'>
-            <div class='col-md-8'>
-                <div class="carousel slide media-carousel" id="media">
-                    <div class="carousel-inner">
-                        <div class="item  active">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <a class="thumbnail" href="#">link1</a>
-                                </div>
-                                <div class="col-md-4">
-                                    <a class="thumbnail" href="#">link2</a>
-                                </div>
-                                <div class="col-md-4">
-                                    <a class="thumbnail" href="#">link3</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <a class="thumbnail" href="#">link4</a>
-                                </div>
-                                <div class="col-md-4">
-                                    <a class="thumbnail" href="#">link5</a>
-                                </div>
-                                <div class="col-md-4">
-                                    <a class="thumbnail" href="#">link6</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <a class="thumbnail" href="#">link7</a>
-                                </div>
-                            </div>
+    <div class="col-md-12 text-center">
+        <h3>Category Carousel <span style="color:red"> preview it on actual browser</span></h3>
+    </div>
+    <div class="col-md-10 col-md-offset-1 category-slider">
+        <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
+            <div class="carousel-inner">
+                <?$i = 0;?>
+                <?php foreach ($categories as $category){?>
+                    <div class="item <? if ($i == 0) echo 'active';?>">
+                        <div class="col-md-2 col-sm-6 col-xs-12">
+                            <a href="<?=Yii::$app->urlManager->createUrl(['post/category', 'category' => $category->category])?>">
+                                <img src="web/images/category_bg.jpg" class="img-responsive">
+                                <p class="category-text"><?=$category->category?></p>
+                            </a>
                         </div>
                     </div>
-                    <a data-slide="prev" href="#media" class="left carousel-control"></a>
-                    <a data-slide="next" href="#media" class="right carousel-control"></a>
-                </div>
+                    <?$i++;
+                }?>
             </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            $('.carousel[data-type="multi"] .item').each(function(){
+                var next = $(this).next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+                next.children(':first-child').clone().appendTo($(this));
+
+                for (var i=0;i<4;i++) {
+                    next=next.next();
+                    if (!next.length) {
+                        next = $(this).siblings(':first');
+                    }
+                    next.children(':first-child').clone().appendTo($(this));
+                }
+            });
+        });
+    </script>

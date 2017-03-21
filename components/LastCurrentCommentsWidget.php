@@ -7,8 +7,7 @@ use Yii;
 use yii\base\Widget;
 use yii\helpers\Html;
 
-class LastCurrentCommentsWidget extends Widget
-{
+class LastCurrentCommentsWidget extends Widget{
     public $comments;
     public $postId;
 

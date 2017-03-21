@@ -1,0 +1,36 @@
+@media (max-width: 767px) {
+    .category-slider .carousel-inner .active.left { left: -100%; }
+    .category-slider .carousel-inner .next        { left:  100%; }
+    .category-slider .carousel-inner .prev		 { left: -100%; }
+    .category-slider .active > div { display:none; }
+    .category-slider .active > div:first-child { display:block; }
+
+}
+@media (min-width: 767px) and (max-width: 992px ) {
+    .category-slider .carousel-inner .active.left { left: -50%; }
+    .category-slider .carousel-inner .next        { left:  50%; }
+    .category-slider .carousel-inner .prev		 { left: -50%; }
+    .category-slider .active > div { display:none; }
+    .category-slider .active > div:first-child { display:block; }
+    .category-slider .active > div:first-child + div { display:block; }
+}
+@media (min-width: 992px ) {
+    .category-slider .carousel-inner .active.left { left: -16.7%; }
+    .category-slider .carousel-inner .next        { left:  16.7%; }
+    .category-slider .carousel-inner .prev		 { left: -16.7%; }
+}
+@media screen and (max-width: 50em) {
+    body, h5 {font-size: 1.75em;}
+    h3, h4 {font-size: 1.8em;}
+}
+
+@media screen and (max-width: 40em) {
+    body, h5 {font-size: 1.75em;}
+    h3, h4 {font-size: 1.5em;}
+}
+
+@media screen and (max-width: 30em) {
+    body, h5 {font-size: 1.5em;}
+    h3, h4 {font-size: 1.25em;}
+}
+

@@ -20,5 +20,11 @@ class Comments extends ActiveRecord{
         $this->date = date('j ', $this->date).$months[date('n', $this->date)].date(' Y', $this->date);
 
     }
+
+    public static function getCommentsCurrentPost($id){
+        return Comments::find()
+            ->where(['post_id' => $id])
+            ->all();
+    }
 }
 ?>
