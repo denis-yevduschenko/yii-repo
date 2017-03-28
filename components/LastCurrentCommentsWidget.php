@@ -12,11 +12,8 @@ class LastCurrentCommentsWidget extends Widget{
     public $postId;
 
     public function run(){
-        $comments = Comments::find()
-            ->where(['post_id' => $this->postId])
-            ->orderBy(["id" => SORT_DESC])
-            ->limit(2)
-            ->all();
+        
+        $comments = Comments::getTwoLastPosts($this->postId);
         $htmlComment = '';
         $elComment = '';
         foreach ($comments as $comment) {

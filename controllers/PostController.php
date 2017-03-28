@@ -68,10 +68,7 @@ class PostController extends AppController{
                 ->orderBy(["id" => SORT_DESC])
                 ->all();
         } else {
-            $posts = Posts::find()
-                ->where(['category' => $category])
-                ->orderBy(["id" => SORT_DESC])
-                ->all();
+            $posts = Posts::getPostConcreteCategory($category);
         }
         if(!empty($posts)){
             return $this->render('category', [

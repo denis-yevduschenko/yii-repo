@@ -11,12 +11,7 @@ class LastPostsWidget extends Widget{
     public $posts;
 
     public function run(){
-        $posts = Posts::find()
-            ->select('id, title, img, intro_text')
-            ->where(['hide' => 0])
-            ->orderBy(["id" => SORT_DESC])
-            ->limit(6)
-            ->all();
+        $posts = Posts::getLatestPosts(6);
         $list = '';
         foreach ($posts as $post){
             $element = Html::tag('a', Html::encode($post->title), ['href' => Yii::$app->urlManager->createUrl(['post/article', 'id' => $post->id]), 'class' => "tenth before after"]);

@@ -51,5 +51,12 @@ class Posts extends ActiveRecord{
             ->groupBy('category')
             ->all();
     }
+
+    public static function getPostConcreteCategory($category){
+        return Posts::find()
+            ->where(['category' => $category])
+            ->orderBy(["id" => SORT_DESC])
+            ->all();
+    }
 }
 ?>

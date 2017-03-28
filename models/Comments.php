@@ -26,5 +26,13 @@ class Comments extends ActiveRecord{
             ->where(['post_id' => $id])
             ->all();
     }
+
+    public static function getTwoLastPosts($id){
+        return Comments::find()
+            ->where(['post_id' => $id])
+            ->orderBy(["id" => SORT_DESC])
+            ->limit(2)
+            ->all();
+    }
 }
 ?>
